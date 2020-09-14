@@ -1,7 +1,7 @@
 \documentclass[11pt]{charter}
 
 % El títulos de la memoria, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \ttitle
-\titulo{Solución Georeferenciada de monitoreo de ganado} 
+\titulo{Solución georeferenciada de monitoreo de ganado} 
 
 % Nombre del posgrado, se usa en la carátula y se puede usar el cualquier lugar del documento con el comando \degreename
 %\posgrado{Carrera de Especialización en Sistemas Embebidos} 
@@ -64,10 +64,7 @@
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 1.0      & Creación del documento                                          & 25/08/2020 \\ \hline
 1.1      & Se completaron los puntos del 1 al 6                                                                 & 06/09/2020 \\ \hline
-1.2      & Otro ejemplo \newline
-		   Con texto partido \newline
-		   En varias líneas \newline
-		   A propósito                                                     & dd/mm/aaaa \\ \hline
+1.2      & Se aplicaron correcciones y se agregaron las historias de usuario                                                 & 14/09/2020 \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -84,7 +81,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un sistema georreferenciado de monitoreo de ganado, y tendrá un presupuesto preliminar estimado de 600 hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un sistema de rastreo, seguimiento y control de ganado, y tendrá un presupuesto preliminar estimado de 670 hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -108,9 +105,9 @@ Se adjunta a esta acta la planificación inicial.
 \label{sec:descripcion}
 
 
-La ganaderia argentina esta pasando por un cambio estructural con el objetivo de ajustarse a la demanda interna y recuperar al mismo tiempo el protagonismo internacional. Producto de esto, Los últimos años creció 10\% la producción de las cuatro carnes hasta alcanzar los 6 millones de toneladas representando la carne vacuna el 50\% de la oferta. Actualmente la Argentina paso a ocupar el 5to puesto en exportaciones de carne bovina, los cuales el 75\% de los envios fueron a China, generando asi un total de u\$s 1.000 millones. Bajo este panorama, los avances tecnologicos innovadores se afianzan con el objetivo de lograr producciones mas eficientes, controladas y previsorias que contribuyan y disparen los beneficios del mercado. 
+La ganadería argentina está pasando por un cambio estructural con el objetivo de ajustarse a la demanda interna y recuperar al mismo tiempo protagonismo internacional. Los últimos años creció 10\% la producción de las cuatro carnes (vacuna, bovina, porcina y ave) hasta alcanzar los 6 millones de toneladas, de las cuales la carne vacuna representa el 50\% de la oferta. Actualmente la Argentina pasó a ocupar el 5to puesto en exportaciones de carne bovina, de las cuales el 75\% de los envíos fueron a China, lo que genera un saldo comercial total de 1.000 millones de dólares. Bajo este panorama, los avances tecnológicos innovadores se afianzan con el objetivo de lograr producciones más eficientes y controladas que contribuyan y disparen los beneficios del mercado. 
 
-Bajo este escenario se espera implementar un sistema autonomo, de bajo costo y consumo que permita recopilar, almacenar, procesar y visualizar la posición de determinadas cabezas de ganado a través de GPS y que opere bajo una red LoRaWAN. Adicionalmente a esto, toda la informacion recolectada debera ser almacenada y posteriormente procesada para ser visualizada en una aplicacion permitiendo al agricultor/criador tener a disposicion un historial de ubicaciones de sus animales en tiempo real. El sistema debe ser escalable y operar con baterias, enviando periodicamente la posicion de la cabeza de ganado. En la figura 1. se puede observar la composicion basica del sistema. 
+Bajo este escenario se espera implementar un sistema autónomo, de bajo costo y consumo que permita recopilar, almacenar, procesar y visualizar la posición de determinadas cabezas de ganado a través de GPS y que opere bajo una red LoRaWAN. Adicionalmente a esto, toda la información recolectada deberá ser almacenada y posteriormente procesada para ser visualizada en una aplicación que permita al agricultor/criador tener a disposición un historial de ubicaciones de sus animales en tiempo real. El sistema debe ser escalable, operar con batería y enviar periódicamente la posición de la cabeza de ganado.  En la figura 1. se puede observar la composición básica del sistema. 
 
 
 
@@ -118,18 +115,16 @@ Bajo este escenario se espera implementar un sistema autonomo, de bajo costo y c
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.9\textwidth]{./Figuras/Diagrama2.png}
+\includegraphics[width=.9\textwidth]{./Figuras/Diagrama.png}
 \caption{Diagrama en bloques del sistema}
 \label{fig:diagBloques}
 \end{figure}
 
 \vspace{25px}
 
-El objetivo principal es la implementacion de un pequeño dispositivo que pueda ser colocado en un collar lo suficientemente comodo para el animal y que sea capaz de tomar la posición GPS bajo un sistema que comprenda un microcontrolador y hardware de bajo consumo almientado con baterias recargables. Al mismo tiempo deberá ser capaz de transmitir la posición y telemetria interna del dispositivo tales como ID, nivel de bateria, he intensidad de la señal haciendo uso de una red LoRaWAN que permitirá guardar los datos en la nube para su posterior procesamiento. 
+El objetivo principal es implementar un pequeño dispositivo que pueda ser colocado en un collar lo suficientemente cómodo para el animal, resistente a condiciones ambientales extremas y que sea capaz de tomar la posición GPS con un sistema que comprenda un microcontrolador y hardware de bajo consumo con baterías recargables incorporando un cargador micro-USB. Al mismo tiempo deberá ser capaz de transmitir la posición y telemetría interna del dispositivo, con parámetros tales como ID, nivel de batería e intensidad de la señal haciendo uso de una red LoRaWAN que permita guardar los datos en la nube para su posterior procesamiento. 
 
-%El equipo deberá alimentarse con baterias recargables incorporando un cargador "onboard" que permita la recarga por micro-USB y ser resistente a condiciones ambientales extremas. 
-
-El proyecto permitirá al agricultor/criador, tener un total control de su ganado, permitiendole visualizar en tiempo real la ubicacion de los mismos, disponer de un historial de movimiento y ubicacion de cada animal, vista total de los limites de su terreno, deducir estado de pastizales en su territorio en base a un historial de movimiento de su ganado, deducir estado de salud de sus animales y control de robo o atentado; todos fuertes contrubiyentes a aumentar la calidad, eficiencia y total control de su ganado. 
+El proyecto permitirá al agricultor/criador tener un total control de su ganado y le dará posibilidad de visualizar en tiempo real la ubicación de los mismos, disponer de un historial de movimiento y ubicación de cada animal, vista total de los limites de su terreno, deducir estado de pastizales en su territorio en base a un historial de movimiento de su ganado, deducir estado de salud de sus animales y control de robo o atentado; todos fuertes contribuyentes a aumentar la calidad, eficiencia y total control de su ganado. 
 
 
 \section{Identificación y análisis de los interesados}
@@ -147,7 +142,7 @@ Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
 Cliente       & \clientename      &\empclientename	& Gerente de Ingenieria       	\\ \hline
 %Impulsor      &                   &              	&        	\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
-Colaboradores & Ing. Jhonattan Camargo                & Smartium             	& Project Manager       	\\ \hline
+Colaboradores & Ing. Jhonattan Camargo                & Smartium             	& I+D       	\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director	Trabajo final \\ \hline
 %Equipo        & miembro1 \newline 
 %				miembro2          &              	&        	\\ \hline
@@ -158,19 +153,19 @@ Usuario final & -                  & Criador que desee implementar una solución
 
 El Mg. Ing. Osvaldo P. Ivani tiene muchos conocimientos técnicos y es un gran guia para la elaboración del proyecto pero no dispone de mucho tiempo por tener una gran responsabilidad laboral. 
 
-El Esp. Ing. Jhonattan Camargo posee conocimientos del tema y será de gran ayuda para solventar dudas técnicas y del proyecto, tambien tiene una agenda ocupada y no dispone de mucho tiempo.
+El Esp. Ing. Jhonattan Camargo posee conocimientos del tema y será de gran ayuda para solventar dudas técnicas y del proyecto, también tiene una agenda ocupada y no dispone de mucho tiempo.
 
 
 
 \section{1. Propósito del proyecto}
 \label{sec:proposito}
 
-El proposito de este proyecto es desarrollar el prototipo de un sistema autonomo capaz de transmitir la ubicación exacta de una cabeza de ganado y a partir de allí implementar una aplicación capaz de usar estos datos para relevar en tiempo real y de forma remota mas información al criador sobre el estado de su su campo y su ganado. 
+El propósito de este proyecto es desarrollar el prototipo de un sistema autónomo capaz de transmitir la ubicación exacta de una cabeza de ganado y a partir de allí implementar una aplicación capaz de usar estos datos para relevar en tiempo real y de forma remota mas información al criador sobre el estado de su campo y su ganado. 
 
 \section{2. Alcance del proyecto}
 \label{sec:alcance}
 
-EL alcance de este proyecto incluirá un prototipo de hardware capaz de transmitir la posicion a traves de la red de comunicacion LoRa y el desarrollo de una aplicacion integrada con AWS cloud capaz de utilizar estos datos para mostrarlos en pantalla. Al mismo tiempo no implicara la conexion desde el Gateway hasta el servidor de Aplicacion ni la capacitacion del usuario para hacer uso de la aplicacion. 
+El alcance de este proyecto incluirá un prototipo de hardware capaz de transmitir la posición a través de la red de comunicación LoRa y el desarrollo de una aplicación integrada con AWS cloud capaz de utilizar estos datos para mostrarlos en pantalla. Al mismo tiempo no contempla la conexión desde el Gateway hasta el servidor de Aplicación, la capacitación del usuario para hacer uso de la aplicación ni el diseño 3D del gabinete del collar. 
 
 
 \section{3. Supuestos del proyecto}
@@ -179,11 +174,11 @@ EL alcance de este proyecto incluirá un prototipo de hardware capaz de transmit
 Para el cumplimiento de este proyecto se supone que: 
 
 \begin{itemize}
-\item Se dispondra del tiempo y espacio para realizar distintas pruebas.
-\item Habran recursos economicos para la construcción del hardware.
-\item Los tiempos fabricacion estaran dentro de los margenes habituales.
-\item Existirá comunicacion permanente con el cliente para solventar dudas.
-\item Los tiempos de autonomia del hardware estaran basandos en cálculos pesimistas y no en ensayos controlados.
+\item Se dispondrá del tiempo y espacio para realizar distintas pruebas.
+\item Habrá recursos económicos para la construcción del hardware.
+\item Los tiempos fabricación estarán dentro de los márgenes habituales.
+\item Existirá comunicación permanente con el cliente para solventar dudas.
+\item Los tiempos de autonomía del hardware estarán basados en cálculos pesimistas y no en ensayos controlados.
 \end{itemize}
 
 
@@ -197,27 +192,27 @@ Los requerimientos del proyecto fueron convenidos por ambas partes a traves del 
 \item Requerimientos generales del proyecto:
 	\begin{enumerate}
 	\item Deadline 20 julio 2021
-	\item Entregable prototipo de hardware funcional y prototipo de aplicacion con funcion de visualizacion de terreno y ubicación en tiempo real. 
+	\item Entregable prototipo de hardware funcional y prototipo de aplicación con función de visualización de terreno y ubicación en tiempo real. 
 	\end{enumerate}
 \item Requerimientos funcionales del sistema:
 	\begin{enumerate}
 	\item Hardware:
 		\begin{enumerate}
 		\item Hardware tipo collar con un peso no superior a los 250gr y protección IP46 o superior.
-		\item Envio de coordenadas GPS a traves de enlace de radiofrecuencia LoRaWAN en banda AU915.
-		\item Bajo consumo con autonomia minima de 1 año.
-		\item Entrada de recarga de bateria por micro-USB.
-		\item Bajo costo.
+		\item Envío de coordenadas GPS a través de enlace de radiofrecuencia LoRaWAN en banda AU915.
+		\item Bajo consumo con autonomía mínima de 1 año.
+		\item Entrada de recarga de batería por micro-USB.
+		%\item Bajo costo.
 		\end{enumerate}
-	\item Software:
+	\item Software y aplicación:
 		\begin{enumerate}
-		\item Almacenamiento de la información recolectada.
+		\item Almacenamiento de la información recolectada en la plataforma AWS Cloud.
 		\item Validación de usuario con la plataforma Smartium.
-		\item Escalabilidad a nivel de sooftware para nuevos collares.
-		\item Creación y asociación de nuevos animales donde se podran cargar identificador unico, tipo, nombre, fecha, etc.
-		\item Calculos de distancia recorrida por el animal de forma diaria, cada tres dias y semanales.
-		\item Creacion de zonas georeferenciadas para establecer si un animal está fuera del territorio.
-		\item Viasualización de la última posición de los animales asociados a un usuario junto con su respectivo historial de ubicación.
+		%\item Escalabilidad a nivel de software para nuevos collares.
+		\item Creación y asociación de nuevos animales donde se podrán cargar identificador único, tipo, nombre, fecha, etc.
+		\item Cálculos de distancia recorrida por el animal de forma diaria, cada tres días y semanales.
+		\item Creación de zonas georeferenciadas para establecer si un animal está fuera del territorio.
+		\item Visualización de la última posición de los animales asociados a un usuario junto con su respectivo historial de ubicación.
 		\item Plataforma compatible con AWS Cloud.
 		\item Bajo tráfico de datos.
 		\end{enumerate}
@@ -231,12 +226,40 @@ Los requerimientos del proyecto fueron convenidos por ambas partes a traves del 
 
 
 
-%\section{Historias de usuarios (\textit{Product backlog})}
-%\label{sec:backlog}
+\section{Historias de usuarios (\textit{Product backlog})}
+\label{sec:backlog}
 
-%\begin{consigna}{red}
-%Descripción: En esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
-%\end{consigna}
+Ponderación: Según el esfuerzo que requiera el cumplimiento de la historia.
+Prioridad: Del 1 al 10 considerando 10 como lo mas importante.
+
+Definimos usuario criador como el usuario final, dueño del campo.
+Definimos como usuario aquel quien hace un uso general del sistema.
+
+Calificación: Ponderación - Prioridad.
+
+\begin{itemize}
+\item Como usuario criador quiero una aplicación que me permita visualizar el campo. \textit{7-10}
+\item Como gerente de Smartium quiero un dispositivo que trasmita su posición para geolocalizarla posteriormente. \textit{10-10}
+\item Como gerente de Smartium quiero que el dispositivo sea compatible con la infraestructura ya existente para mayor compatibilidad y soporte. \textit{7-10}
+\item Como gerente de Smartium quiero que la información sea visible en una aplicación para tener mayor portabilidad. \textit{10-10}
+\item Como gerente de Smartium quiero una interfaz gráfica para tener un login de usuario. \textit{7-10}
+\item Como usuario criador quiero una aplicación para que funcione en un smartphone. \textit{7-7}
+\item Como usuario criador quiero una aplicación para poder ver donde se mueve el ganado en distintos intervalos de tiempo. \textit{7-7}
+\item Como gerente de Smartium quiero un dispositivo funcione al menos 1 año para facilitar la instalación y el mantenimiento. \textit{7-10}
+\item Como gerente de Smartium quiero un sistema compatible con AWS  Cloud para hacer uso de la infraestructura existente. \textit{7-10}
+\item Como gerente de Smartium quiero un dispositivo que sea de bajo consumo para facilitar su uso y mantenimiento. \textit{7-10}
+\item Como gerente de Smartium quiero que el sistema sea escalable para permitir agregar nuevos dispositivos. \textit{10-10}
+\item Como usuario criador quiero acceder a una web para ver el ganado. \textit{10-10}
+\item Como gerente de Smartium quiero un dispositivo que sea recargable para fomentar su re-utilidad. \textit{5-10}
+\item Como gerente de Smaritum quiero un sistema de baja tasa de transmisión de datos para ampliar su utilidad en áreas sub-urbanas. \textit{10-10}
+\item Como gerente de Smartium quiero un dispositivo que sea ligero para no perjudicar al animal. \textit{5-10}
+\item Como usuario criador quiero un dispositivo que sea fácil de colocar para facilitar su uso. \textit{5-10}
+\item Como usuario criador quiero un dispositivo que no afecte el comportamiento del animal para cuidar su integridad y desarrollo. \textit{5-10}
+\item Como gerente de Smartium quiero una aplicación multi-plataforma para no limitar su uso a ciertos dispositivos. \textit{10-10}
+\item Como usuario criador quiero un sistema que permita conocer el estado anímico del animal para determinar una posible enfermedad. \textit{10-7}
+\item Como usuario criador quiero visualizar un mapa para conocer el estado de los pastizales. \textit{10-7}
+\item Como usuario criador quiero una interfaz gráfica para poder nombrar e identificar un animal en particular. \textit{7-7}   
+\end{itemize}
 
 \section{5. Entregables principales del proyecto}
 \label{sec:entregables}
@@ -246,7 +269,7 @@ Los requerimientos del proyecto fueron convenidos por ambas partes a traves del 
 \item Planificación del trabajo final.
 \item Prototipo funcional del hardware y software de aplicación.
 \item Código fuente.
-\item Diagrama esquematico.
+\item Diagrama esquemático del hardware.
 \item Informe final.
 
 \end{itemize}
@@ -258,16 +281,16 @@ Los requerimientos del proyecto fueron convenidos por ambas partes a traves del 
 \begin{enumerate}
 \item Análisis inicial (130)
 	\begin{enumerate}
-	\item Lectura de referencias bibliograficas (60)
+	\item Lectura de referencias bibliográficas (60)
 	\item Introducción a herramientas necesarias (30)
 	\item Elaboración de la planificación del proyecto (40)
 	\end{enumerate}
 \item Diseño de Hardware (165)
 	\begin{enumerate}
 	\item Diseño estructura del sistema (40)
-	\item Diseño de esquematico preliminar (15)
+	\item Diseño preliminar del circuito (15)
 	\item Selección de componentes (15)
-	\item Elaboración de esquemático (15)
+	\item Elaboración del circuito esquemático (15)
 	\item Análisis de consumo (10)
 	\item Diseño de PCB (20)
 	\item Diseño del prototipo físico (20)
