@@ -63,8 +63,9 @@
 \rowcolor[HTML]{C0C0C0} 
 Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios realizados} & Fecha      \\ \hline
 1.0      & Creación del documento                                          & 25/08/2020 \\ \hline
-1.1      & Se completaron los puntos del 1 al 6                                                                 & 06/09/2020 \\ \hline
-1.2      & Se aplicaron correcciones y se agregaron las historias de usuario                                                 & 14/09/2020 \\ \hline
+1.1      & Se completaron los puntos del 1 al 6.                                                                 & 06/09/2020 \\ \hline
+1.2      & Se aplicaron correcciones y se agregaron las historias de usuario. & 14/09/2020 \\ \hline
+1.3      & Se aplicaron correcciones y se completaron los puntos de 7 al 11.                                                 & 21/09/2020 \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -81,7 +82,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un sistema de rastreo, seguimiento y control de ganado, y tendrá un presupuesto preliminar estimado de 670 hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un sistema de rastreo, seguimiento y control de ganado, y tendrá un presupuesto preliminar estimado de 790 hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -142,7 +143,7 @@ Rol           & Nombre y Apellido & Organización 	& Puesto 	\\ \hline
 Cliente       & \clientename      &\empclientename	& Gerente de Ingenieria       	\\ \hline
 %Impulsor      &                   &              	&        	\\ \hline
 Responsable   & \authorname       & FIUBA        	& Alumno 	\\ \hline
-Colaboradores & Ing. Jhonattan Camargo                & Smartium             	& I+D       	\\ \hline
+Colaboradores & Esp. Ing. Jhonattan Camargo                & Smartium             	& I+D       	\\ \hline
 Orientador    & \supname	      & \pertesupname 	& Director	Trabajo final \\ \hline
 %Equipo        & miembro1 \newline 
 %				miembro2          &              	&        	\\ \hline
@@ -185,7 +186,7 @@ Para el cumplimiento de este proyecto se supone que:
 \section{4. Requerimientos}
 \label{sec:requerimientos}
 
-Los requerimientos del proyecto fueron convenidos por ambas partes a traves del documento inicial de presentación del proyecto y distintas reuniones coordinadas. 
+Los requerimientos del proyecto fueron convenidos por ambas partes a través del documento inicial de presentación del proyecto y distintas reuniones coordinadas. 
 
 
 \begin{enumerate}
@@ -229,35 +230,37 @@ Los requerimientos del proyecto fueron convenidos por ambas partes a traves del 
 \section{Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-Ponderación: Según el esfuerzo que requiera el cumplimiento de la historia.
-Prioridad: Del 1 al 10 considerando 10 como lo mas importante.
+Ponderación: según el esfuerzo que requiera el cumplimiento de la historia.
 
-Definimos usuario criador como el usuario final, dueño del campo.
-Definimos como usuario aquel quien hace un uso general del sistema.
+Prioridad: de 1 al 10 considerando 10 como lo mas importante.
+
+Se define usuario criador como el usuario final, dueño del campo.
+
+Se define como usuario aquel quien hace un uso general del sistema.
 
 Calificación: Ponderación - Prioridad.
 
 \begin{itemize}
 \item Como usuario criador quiero una aplicación que me permita visualizar el campo. \textit{7-10}
 \item Como gerente de Smartium quiero un dispositivo que trasmita su posición para geolocalizarla posteriormente. \textit{10-10}
-\item Como gerente de Smartium quiero que el dispositivo sea compatible con la infraestructura ya existente para mayor compatibilidad y soporte. \textit{7-10}
+\item Como gerente de Smartium quiero que el dispositivo sea compatible con la infraestructura ya existente para mayor interoperabilidad y soporte. \textit{7-10}
 \item Como gerente de Smartium quiero que la información sea visible en una aplicación para tener mayor portabilidad. \textit{10-10}
 \item Como gerente de Smartium quiero una interfaz gráfica para tener un login de usuario. \textit{7-10}
 \item Como usuario criador quiero una aplicación para que funcione en un smartphone. \textit{7-7}
 \item Como usuario criador quiero una aplicación para poder ver donde se mueve el ganado en distintos intervalos de tiempo. \textit{7-7}
 \item Como gerente de Smartium quiero un dispositivo funcione al menos 1 año para facilitar la instalación y el mantenimiento. \textit{7-10}
-\item Como gerente de Smartium quiero un sistema compatible con AWS  Cloud para hacer uso de la infraestructura existente. \textit{7-10}
+\item Como gerente de Smartium quiero un sistema compatible con AWS Cloud para hacer uso de la infraestructura existente. \textit{7-10}
 \item Como gerente de Smartium quiero un dispositivo que sea de bajo consumo para facilitar su uso y mantenimiento. \textit{7-10}
 \item Como gerente de Smartium quiero que el sistema sea escalable para permitir agregar nuevos dispositivos. \textit{10-10}
 \item Como usuario criador quiero acceder a una web para ver el ganado. \textit{10-10}
 \item Como gerente de Smartium quiero un dispositivo que sea recargable para fomentar su re-utilidad. \textit{5-10}
 \item Como gerente de Smaritum quiero un sistema de baja tasa de transmisión de datos para ampliar su utilidad en áreas sub-urbanas. \textit{10-10}
-\item Como gerente de Smartium quiero un dispositivo que sea ligero para no perjudicar al animal. \textit{5-10}
-\item Como usuario criador quiero un dispositivo que sea fácil de colocar para facilitar su uso. \textit{5-10}
+\item Como usuario criador quiero un dispositivo que sea ligero para no perjudicar al animal. \textit{5-10}
+\item Como usuario criador quiero un dispositivo que sea sencillo de colocar para facilitar su uso. \textit{5-10}
 \item Como usuario criador quiero un dispositivo que no afecte el comportamiento del animal para cuidar su integridad y desarrollo. \textit{5-10}
 \item Como gerente de Smartium quiero una aplicación multi-plataforma para no limitar su uso a ciertos dispositivos. \textit{10-10}
-\item Como usuario criador quiero un sistema que permita conocer el estado anímico del animal para determinar una posible enfermedad. \textit{10-7}
-\item Como usuario criador quiero visualizar un mapa para conocer el estado de los pastizales. \textit{10-7}
+\item Como usuario criador quiero un sistema que permita relevar el comportamiento del animal para determinar una posible enfermedad. \textit{10-7}
+\item Como usuario criador quiero visualizar un mapa topográfico del terreno para conocer el estado de los pastizales. \textit{10-7}
 \item Como usuario criador quiero una interfaz gráfica para poder nombrar e identificar un animal en particular. \textit{7-7}   
 \end{itemize}
 
@@ -281,281 +284,234 @@ Calificación: Ponderación - Prioridad.
 \begin{enumerate}
 \item Análisis inicial (130)
 	\begin{enumerate}
-	\item Lectura de referencias bibliográficas (60)
-	\item Introducción a herramientas necesarias (30)
-	\item Elaboración de la planificación del proyecto (40)
+	\item Lectura de referencias bibliográficas. (60)
+	\item Análisis de las herramientas trabajo. (30)
+	\item Elaboración de la planificación del proyecto. (40)
 	\end{enumerate}
-\item Diseño de Hardware (165)
+\item Diseño de Hardware (135)
 	\begin{enumerate}
-	\item Diseño estructura del sistema (40)
-	\item Diseño preliminar del circuito (15)
-	\item Selección de componentes (15)
-	\item Elaboración del circuito esquemático (15)
-	\item Análisis de consumo (10)
-	\item Diseño de PCB (20)
-	\item Diseño del prototipo físico (20)
-	\item Elaboración de protocolos de transmisión y confirmación de envío de datos a la red LoRaWAN (30)
+	\item Diseño estructura del sistema. (40)
+	\item Diseño preliminar del circuito. (15)
+	\item Selección de componentes. (15)
+	\item Elaboración del circuito esquemático. (15)
+	\item Análisis preliminar de consumo. (10)
+	\item Diseño de PCB. (20)
+	\item Dimensionado del prototipo físico. (20)
 	\end{enumerate}
-\item Producción (80)
+\item Desarrollo de Firmware (155)
 	\begin{enumerate}
-	\item Fabricación del PCB (20)
-	\item Montaje del circuito (20)
-	\item Fabricación del prototipo (40)
+	\item Configuración de entorno de diseño. (15)
+	\item Diseño de la estructura del firmware. (15)
+	\item Selección de interfaz de comunicación. (15)
+	\item Implementación de adquisición de datos. (40)
+	\item Trama de comunicación. (40)
+	\item Configuración de la estrategia de control del sistema. (30)
 	\end{enumerate}
-\item Testing (70)
+\item Producción (60)
 	\begin{enumerate}
-	\item Comprobación de funcionamiento del circuito (20)
-	\item Ensayo y medición de consumo (20)
-	\item Ensayo de comunicación con la red LoRaWAN (20)
-	\item Checkeo de la correcta llegada de datos al Cloud (10)
+	\item Fabricación del PCB y montaje de componentes. (40)
+	\item Montaje final del prototipo. (20)
 	\end{enumerate}
-\item Aplicación (155)
+\item Testing (50)
 	\begin{enumerate}
-	\item Selección de estrategia y entorno de programación (20)
-	\item Comunicación y permisos con la nube (20)
-	\item Desarrollo del login de usuario (10)
-	\item Comprobación de comunicación y login correctos (5)
-        \item Desarrollo de interfaz de usuario (60)
-	\item Desarrollo de algoritmos de historial de ubicación (40)
+	\item Comprobación de funcionamiento del circuito. (10)
+	\item Ensayo y medición de consumo. (15)
+	\item Ensayo de comunicación con la red LoRaWAN. (15)
+	\item Checkeo de la correcta llegada de datos al Cloud. (10)
+	\end{enumerate}
+\item Aplicación (130)
+	\begin{enumerate}
+	\item Selección de estrategia y entorno de programación. (20)
+	\item Comunicación y permisos con la nube. (20)
+	\item Desarrollo del login de usuario. (10)
+	\item Comprobación de comunicación y login correctos. (10)
+    \item Desarrollo de interfaz de usuario. (40)
+	\item Desarrollo de algoritmos de historial de ubicación. (30)
 	\end{enumerate}
 \item Ensayos sobre aplicación (20)
 	\begin{enumerate}
-	\item Pruebas sobre la aplicación (10)
-	\item Corrección de errores y ajustes menores (10)
+	\item Pruebas y ensayos sobre la aplicación. (10)
+	\item Corrección de errores y ajustes menores. (10)
 	\end{enumerate}
-\item Finalización (50)
+\item Cierre del proyecto (110)
 	\begin{enumerate}
-	\item Elaboración de documentación (20)
-	\item Elaboración de la presentación del proyecto final (20)
-	\item Cierre del proyecto (10)
+	\item Elaboración de documentación. (20)
+	\item Elaboración de la memoria técnica del trabajo final. (60) 
+	\item Elaboración de la presentación del proyecto final. (20)
+	\item Cierre del proyecto. (10)
 	\end{enumerate}
 \end{enumerate}
 
-Cantidad total de horas: (670)
+Cantidad total de horas: (790)
  
 
 
 \section{7. Diagrama de Activity On Node}
 \label{sec:AoN}
 
-\begin{consigna}{red}
-Armar el AoN a partir del WBS definido en la etapa anterior. 
-
-%La figura \ref{fig:AoN} fue elaborada con el paquete latex tikz y pueden consultar la siguiente referencia \textit{online}:
-
-%\url{https://www.overleaf.com/learn/latex/LaTeX_Graphics_using_TikZ:_A_Tutorial_for_Beginners_(Part_3)\%E2\%80\%94Creating_Flowcharts}
-
-\end{consigna}
+Los tiempos del diagrama de la Fig.2 están en horas con excepción de las fechas de inicio y fin.
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.8\textwidth]{./Figuras/AoN.png}
+\includegraphics[width=1\textwidth]{./Figuras/AoNb3.png}
 \caption{Diagrama en \textit{Activity on Node}}
 \label{fig:AoN}
 \end{figure}
 
-Indicar claramente en qué unidades están expresados los tiempos.
-De ser necesario indicar los caminos semicríticos y analizar sus tiempos mediante un cuadro.
-Es recomendable usar colores y un cuadro indicativo describiendo qué representa cada color, como se muestra en el siguiente ejemplo:
-
-
+La tarea 4.1 tiene riesgo de sufrir retrasos de tal manera de establecerse como un camino crítico. 
 
 \section{8. Diagrama de Gantt}
 \label{sec:gantt}
 
-\begin{consigna}{red}
-Utilizar el software Gantter for Google Drive o alguno similar para dibujar el diagrama de Gantt.
-
-Existen muchos programas y recursos \textit{online} para hacer diagramas de gantt, entre las cuales destacamos:
-
-\begin{itemize}
-\item Planner
-\item GanttProject
-\item Trello + \textit{plugins}. En el siguiente link hay un tutorial oficial: \\ \url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
-\item Creately, herramienta online colaborativa. \\\url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
-\item Se puede hacer en latex con el paquete \textit{pgfgantt}\\ \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
-\end{itemize}
-
-Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
-Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
-
-Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
-Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
-Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
-
-En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realizado con el paquete de \textit{pgfgantt}. En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
-
-\begin{figure}[htbp]
-\begin{center}
-\begin{ganttchart}{1}{12}
-  \gantttitle{2020}{12} \\
-  \gantttitlelist{1,...,12}{1} \\
-  \ganttgroup{Group 1}{1}{7} \\
-  \ganttbar{Task 1}{1}{2} \\
-  \ganttlinkedbar{Task 2}{3}{7} \ganttnewline
-  \ganttmilestone{Milestone o hito}{7} \ganttnewline
-  \ganttbar{Final Task}{8}{12}
-  \ganttlink{elem2}{elem3}
-  \ganttlink{elem3}{elem4}
-\end{ganttchart}
-\end{center}
-\caption{Diagrama de gantt de ejemplo}
-\label{fig:gantt}
+\begin{figure}[htpb]
+\centering 
+\includegraphics[width=.88\textwidth]{./Figuras/GanttIoT_tabla.png}
+\caption{Diagrama en \textit{Tabla de WBS}}
+\label{fig:AoN}
 \end{figure}
 
-\end{consigna}
+\begin{figure}[htpb]
+\centering 
+\includegraphics[angle=90, width=.91\textwidth]{./Figuras/GanttIoT_figura.png}
+\caption{Diagrama en \textit{Diagrama de Gantt}}
+\label{fig:AoN}
+\end{figure}
+
 
 \section{9. Matriz de uso de recursos de materiales}
 \label{sec:recursos}
 
+%\begin{table}
+%\label{tab:recursos}
+%\centering
+%\begin{tabularx}{\linewidth}{@{}|c|X|X|X|X|X|X|c|@{}}
+%\hline
+%\cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \multicolumn{6}{c|}{\cellcolor[HTML]{C0C0C0}Recursos requeridos (expresado en horas)} \\ \cline{4-6} 
+%\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} & \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular}} & PC & xDot-DK & Prototipo & Gateway & AWS Cloud & Workspace\\ \hline
+% 1.&  Análisis inicial&  130&  -&  -&  -& -& \\ \hline
+% 2.4.& Elaboración del circuito esquemático &  &  &  &  & & \\ \hline
+% 2.6.& Diseño de PCB &  &  &  &  & &\\ \hline
+% 2.8.& Elaboración de protocolos de transmisión &  &  &  &  & &\\ \hline
+% 3.& Producción &  &  &  &  & &\\ \hline 
+% 4.& Testing &  &  &  &  & &\\ \hline
+% 5.2& Comunicación y permisos con la nube &  &  &  &  & &\\ \hline
+% 5.3.& Desarrollo del login de usuario &  &  &  &  & &\\ \hline
+% 5.4.& Comprobación de comunicación y login correctos  &  &  &  &  & &\\ \hline
+% 5.5.& Desarrollo de interfaz de usuario &  &  &  &  & &\\ \hline
+% 5.6.& Desarrollo de algoritmos de historial de ubicación &  &  &  &  & &\\ \hline
+% 6.& Ensayos sobre la aplicación &  &  &  &  & &\\ \hline
+% 7.& Cierre de proyecto &  &  &  &  & &\\ \hline
+%\end{tabularx}%
+%\end{table}
 
-\begin{table}
+
+\begin{table}[h]
 \label{tab:recursos}
-\centering
-\begin{tabularx}{\linewidth}{@{}|c|X|X|X|X|c|@{}}
+%\begin{tabular}{\linewidth}{@{}|c|X|X|X|X|X|X|c|@{}}
+\begin{tabular}{|l|c|l|l|l|l|l|l|}
 \hline
-\cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \multicolumn{4}{c|}{\cellcolor[HTML]{C0C0C0}Recursos requeridos (horas)} \\ \cline{3-6} 
-\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} & \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular}} & Material 1 & Material 2 & Material 3 & Material 4 \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline 
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline 
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
-
-\end{tabularx}%
+\multicolumn{1}{|c|}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Código\\  WBS\end{tabular}}} &
+  \multirow{2}{*}{Nombre de la tarea} &
+  \multicolumn{6}{c|}{Recursos requeridos (en horas)} \\ \cline{3-8} 
+\multicolumn{1}{|c|}{} &
+   &
+  \multicolumn{1}{c|}{PC} &
+  \multicolumn{1}{c|}{xDOT-DK} &
+  \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Altium \\ Desing\end{tabular}} &
+  \multicolumn{1}{c|}{Gateway} &
+  \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}AWS \\ Cloud\end{tabular}} &
+  Workspace \\ \hline
+1.   & Análisis inicial                                                                                 &130  &-  &-  &-  &-  &-  \\ \hline
+2.4. & \begin{tabular}[c]{@{}c@{}}Elaboración del circuito \\ esquemático\end{tabular}                  &15  &-  &15  &-  &-  &-  \\ \hline
+2.6. & Diseño de PCB                                                                                    &20  &-  &20  &-  &-  &-  \\ \hline
+3.1 & \begin{tabular}[c]{@{}c@{}}Configuración del \\  entorno de diseño\end{tabular}              &15  &15  &-  &-  &-  &-  \\ \hline
+3.2 & \begin{tabular}[c]{@{}c@{}}Diseño de la  \\  estructura del \\ firmware \end{tabular}              &15  &15  &-  &-  &-  &-  \\ \hline
+3.3 & \begin{tabular}[c]{@{}c@{}}Selección interfaz \\  de comunicación\end{tabular}              &15  &15  &-  &-  &-  &-  \\ \hline
+3.4 & \begin{tabular}[c]{@{}c@{}}Implementación de \\  adquisición\end{tabular}              &40  &40  &-  &20  &-  &-  \\ \hline
+3.5 & \begin{tabular}[c]{@{}c@{}}Trama de \\ comunicación \end{tabular}              &40  &40  &-  &20  &-  &-  \\ \hline
+3.6 & \begin{tabular}[c]{@{}c@{}}Configuración de \\  la estrategia\\ general de \\ control \end{tabular}              &30  &30  &-  &15  &-  &-  \\ \hline
+4.   & Producción                                                                                       &-  &-  &-  &-  &-  &60  \\ \hline
+5.   & Testing                                                                                          &30  &-  &-  &50  &50  &20  \\ \hline
+6.2. & \begin{tabular}[c]{@{}c@{}}Comunicación y permisos \\ con la nube\end{tabular}                   &20  &-  &-  &-  &20  &-  \\ \hline
+6.3. & \begin{tabular}[c]{@{}c@{}}Desarrollo del login \\ de usuario\end{tabular}                       &10  &-  &-  &-  &10  &-  \\ \hline
+6.4. & \begin{tabular}[c]{@{}c@{}}Comprobación de \\ comunicación y \\ login correctos\end{tabular}     &10  &-  &-  &-  &10  &-  \\ \hline
+6.5. & \begin{tabular}[c]{@{}c@{}}Desarrollo de interfaz \\ de usuario\end{tabular}                     &40  &-  &-  &-  &40  &-  \\ \hline
+6.6. & \begin{tabular}[c]{@{}c@{}}Desarrollo de \\ algoritmos de historial \\ de ubicación\end{tabular} &30  &-  &-  &-  &30  &-  \\ \hline
+7.   & \begin{tabular}[c]{@{}c@{}}Ensayo sobre \\ la aplicación\end{tabular}                            &20  &-  &-  &-  &20  &-  \\ \hline
+8.   & Cierre de proyecto                                                                               &110  &-  &-  &-  &-  &110  \\ \hline
+\end{tabular}
 \end{table}
 
+\vspace{260px}
 
 \section{10. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
-\begin{consigna}{red}
-Si el proyecto es complejo entonces separarlo en partes:
-\begin{itemize}
-\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
-\item El desglose detallado del subtotal de cada una de las áreas.
-\end{itemize}
+El presupuesto corresponde a un estimado en dólares, considerando un costo por hora de ingeniería de AR\$350 (u\$d4.64) y un aproximado de costos indirectos del 30\% de los costos directos. No fue incluido ni considerado el costo del Gateway ni del servicio de AWS Cloud. 
 
-IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
-
-\end{consigna}
+\vspace{10px}
 
 \begin{table}[htpb]
-\centering
-\begin{tabularx}{\linewidth}{@{}|X|c|r|r|@{}}
+\label{tab:presupuesto}
+\begin{tabular}{|c|c|c|c|c|}
 \hline
-\rowcolor[HTML]{C0C0C0} 
-\multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS DIRECTOS} \\ \hline
-\rowcolor[HTML]{C0C0C0} 
-Descripción &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
-\rowcolor[HTML]{C0C0C0} 
-\multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
-\rowcolor[HTML]{C0C0C0} 
-Descripción &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
-\rowcolor[HTML]{C0C0C0}
-\multicolumn{3}{|c|}{TOTAL} &
-   \\ \hline
-\end{tabularx}%
+Categoría & Detalle                  & Cantidad & Valor unitario (Dólares) & Costo (Dólares) \\ \hline
+          & Horas de Ingeniería      & 790      & 4.64                     & 3665.6          \\ \cline{2-5} 
+          & Módulo xDOT              & 1        & 7.3                      & 7.3             \\ \cline{2-5} 
+          & Módulo GPS               & 1        & 38                       & 38              \\ \cline{2-5} 
+          & Módulo Regulador         & 1        & 18                       & 18              \\ \cline{2-5} 
+          & Componentes electrónicos & -        & 38                       & 38              \\ \cline{2-5} 
+          & Fabricación de PCB       & 1        & 50                       & 50              \\ \cline{2-5} 
+          & Fabricación de gabinete  & 1        & 33                       & 33              \\ \cline{2-5} 
+\multirow{-8}{*}{\begin{tabular}[c]{@{}c@{}}Costos\\ Directos\end{tabular}}    & Montaje del prototipo         & -         & 10        & 10                             \\ \hline
+\rowcolor[HTML]{FFFFC7} 
+\multicolumn{4}{|c|}{\cellcolor[HTML]{FFFFC7}Subtotal}                     & 3859.9          \\ \hline
+          & \multicolumn{3}{c|}{30\% de los costos directos}               & 1157.97          \\ \cline{2-5} 
+\multirow{-2}{*}{\begin{tabular}[c]{@{}c@{}}Costos \\ Indirectos\end{tabular}} & \multicolumn{3}{c|}{\cellcolor[HTML]{FFFFC7}Subtotal} & \cellcolor[HTML]{FFFFC7}938.97 \\ \hline
+\rowcolor[HTML]{FFCE93} 
+\multicolumn{4}{|c|}{\cellcolor[HTML]{FFCE93}Total}                        & 5017.87         \\ \hline
+\end{tabular}
 \end{table}
 
+\vspace{400px}
 
 \section{11. Matriz de asignación de responsabilidades}
 \label{sec:responsabilidades}
-\begin{consigna}{red}
-Establecer la matriz de asignación de responsabilidades y el manejo de la autoridad completando la siguiente tabla:
 
-\begin{table}[htpb]
-\centering
-\resizebox{\textwidth}{!}{%
+\begin{table}[h]
 \begin{tabular}{|c|c|c|c|c|c|}
 \hline
-\rowcolor[HTML]{C0C0C0} 
-\cellcolor[HTML]{C0C0C0} &
-  \cellcolor[HTML]{C0C0C0} &
-  \multicolumn{4}{c|}{\cellcolor[HTML]{C0C0C0}Listar todos los nombres y roles del proyecto} \\ \cline{3-6} 
-\rowcolor[HTML]{C0C0C0} 
-\cellcolor[HTML]{C0C0C0} &
-  \cellcolor[HTML]{C0C0C0} &
+\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} &
+  \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Nombre de \\ la tarea\end{tabular}} &
   Responsable &
   Orientador &
-  Equipo &
+  Colaboradores &
   Cliente \\ \cline{3-6} 
-\rowcolor[HTML]{C0C0C0} 
-\multirow{-3}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} &
-  \multirow{-3}{*}{\cellcolor[HTML]{C0C0C0}Nombre de la tarea} &
-  \authorname &
-  \supname &
-  Nombre de alguien &
-  \clientename \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
-\end{tabular}%
-}
+ &
+   &
+  \begin{tabular}[c]{@{}c@{}}Christian \\ Canaan \\ Castro Botek\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Nombre del \\ Director\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Esp. Ing. \\ Jhonattan\\  Camargo\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Mg. Ing. \\ Osvaldo \\ P. Ivani\end{tabular} \\ \hline
+1.1. & \begin{tabular}[c]{@{}c@{}}Lectura de Ref. \\ Bibliográficas\end{tabular}                 & P &   &   &   \\ \hline
+1.2. & \begin{tabular}[c]{@{}c@{}}Análisis de las \\ herramientas \\ de trabajo\end{tabular}     & P &   & C & C \\ \hline
+1.3. & \begin{tabular}[c]{@{}c@{}}Elaboración de \\ la planificación \\ de proyecto\end{tabular} & P &   &   &   \\ \hline
+2.1. & \begin{tabular}[c]{@{}c@{}}Diseño de la \\ estructura del \\ sistema\end{tabular}         & P &   & C & C \\ \hline
+2.2. & \begin{tabular}[c]{@{}c@{}}Diseño preliminar \\ del circuito\end{tabular}                 & P & C & C & C \\ \hline
+2.3. & \begin{tabular}[c]{@{}c@{}}Selección de \\ componentes\end{tabular}                       & P &   & A & A \\ \hline
+2.4. & \begin{tabular}[c]{@{}c@{}}Elaboración del \\ circuito \\ esquemático\end{tabular}        & P & C &   &   \\ \hline
+2.5. & \begin{tabular}[c]{@{}c@{}}Análisis preliminar \\ de consumo\end{tabular}                 & P & C &   &   \\ \hline
+2.6. & Diseño de PCB                                                                             & P &  & A & A \\ \hline
+2.7. & \begin{tabular}[c]{@{}c@{}}Dimensionado del \\ prototipo físico\end{tabular}              & P &   & A & A \\ \hline
+3.   & \begin{tabular}[c]{@{}c@{}}Desarrollo de \\ firmware\end{tabular}                         & P & C & C & C \\ \hline
+4.   & Producción                                                                                & P & C & I & I \\ \hline
+5.   & Testing                                                                                   & P & C & I & I \\ \hline
+6.   & Aplicación                                                                                & P & C & C & C \\ \hline
+7.   & \begin{tabular}[c]{@{}c@{}}Ensayo sobre la \\ aplicación\end{tabular}                     & P &   & I & I \\ \hline
+8.   & Cierre de proyecto                                                                        & P & A & I & A \\ \hline
+\end{tabular}
 \end{table}
 
-{\footnotesize
 Referencias:
 \begin{itemize}
 	\item P = Responsabilidad Primaria
@@ -564,14 +520,8 @@ Referencias:
 	\item I = Informado
 	\item C = Consultado
 \end{itemize}
-} %footnotesize
 
-Una de las columnas debe ser para el Director, ya que se supone que participará en el proyecto.
-A su vez se debe cuidar que no queden muchas tareas seguidas sin ``A'' o ``I''.
 
-Importante: es redundante poner ``I/A'' o ``I/C'', porque para aprobarlo o responder consultas primero la persona debe ser informada.
-
-\end{consigna}
 
 \section{12. Gestión de riesgos}
 \label{sec:riesgos}
