@@ -14,8 +14,8 @@
 \autor{Christian Canaan Castro Botek} 
 
 % El nombre del director y co-director, se puede usar el cualquier lugar del documento con el comando \supname y \cosupname y \pertesupname y \pertecosupname
-\director{Nombre del Director}
-\pertenenciaDirector{pertenencia} 
+\director{Mg. Ing. Osvaldo P. Ivani}
+\pertenenciaDirector{Smartium} 
 % FIXME:NO IMPLEMENTADO EL CODIRECTOR ni su pertenencia
 \codirector{} % si queda vacio no se deberíá incluir 
 \pertenenciaCoDirector{}
@@ -66,6 +66,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 1.1      & Se completaron los puntos del 1 al 6.                                                                 & 06/09/2020 \\ \hline
 1.2      & Se aplicaron correcciones y se agregaron las historias de usuario. & 14/09/2020 \\ \hline
 1.3      & Se aplicaron correcciones y se completaron los puntos de 7 al 11.                                                 & 21/09/2020 \\ \hline
+1.4      & Se aplicaron correcciones y se completaron los puntos de 12 al 17.                                                 & 28/09/2020 \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -195,15 +196,22 @@ Los requerimientos del proyecto fueron convenidos por ambas partes a través del
 	\item Deadline 20 julio 2021
 	\item Entregable prototipo de hardware funcional y prototipo de aplicación con función de visualización de terreno y ubicación en tiempo real. 
 	\end{enumerate}
+\item Requerimientos físicos del sistema:
+	\begin{enumerate}
+	\item Prototipo tipo collar. 
+	\item Peso no superior a los 250gr.
+	\item Resistente a condiciones ambientales, con grado de protección IP46 o superior.
+	\end{enumerate}
 \item Requerimientos funcionales del sistema:
 	\begin{enumerate}
 	\item Hardware:
 		\begin{enumerate}
-		\item Hardware tipo collar con un peso no superior a los 250gr y protección IP46 o superior.
+		\item Contará con pines de acceso para el cargado de firmware.
 		\item Envío de coordenadas GPS a través de enlace de radiofrecuencia LoRaWAN en banda AU915.
 		\item Bajo consumo con autonomía mínima de 1 año.
 		\item Entrada de recarga de batería por micro-USB.
-		%\item Bajo costo.
+		\item Baja tasa de transferencia de datos.
+		\item Bajo costo, se busca competitividad en el mercado.
 		\end{enumerate}
 	\item Software y aplicación:
 		\begin{enumerate}
@@ -353,22 +361,26 @@ Los tiempos del diagrama de la Fig.2 están en horas con excepción de las fecha
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=1\textwidth]{./Figuras/AoNb3.png}
+\includegraphics[width=.91\textwidth]{./Figuras/AoNb3.png}
 \caption{Diagrama en \textit{Activity on Node}}
 \label{fig:AoN}
 \end{figure}
 
-La tarea 4.1 tiene riesgo de sufrir retrasos de tal manera de establecerse como un camino crítico. 
+La tarea 4.1 podría sufrir retrasos por lo que se la considera un camino potencialmente crítico. 
+
+\vspace{20px}
+
 
 \section{8. Diagrama de Gantt}
 \label{sec:gantt}
 
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.88\textwidth]{./Figuras/GanttIoT_tabla.png}
+\includegraphics[width=1\textwidth]{./Figuras/GanttIoT_tabla.png}
 \caption{Diagrama en \textit{Tabla de WBS}}
 \label{fig:AoN}
 \end{figure}
+
 
 \begin{figure}[htpb]
 \centering 
@@ -376,6 +388,14 @@ La tarea 4.1 tiene riesgo de sufrir retrasos de tal manera de establecerse como 
 \caption{Diagrama en \textit{Diagrama de Gantt}}
 \label{fig:AoN}
 \end{figure}
+
+
+
+\begin{itemize}
+	\item Las tareas en negro indican tareas generales. 
+	\item Las tareas en azul indican sub-tareas.
+	\item Las tareas en rojo indican inactividad por vacaciones.
+\end{itemize}
 
 
 \section{9. Matriz de uso de recursos de materiales}
@@ -417,7 +437,7 @@ La tarea 4.1 tiene riesgo de sufrir retrasos de tal manera de establecerse como 
    &
   \multicolumn{1}{c|}{PC} &
   \multicolumn{1}{c|}{xDOT-DK} &
-  \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Altium \\ Desing\end{tabular}} &
+  \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}Altium \\ Design\end{tabular}} &
   \multicolumn{1}{c|}{Gateway} &
   \multicolumn{1}{c|}{\begin{tabular}[c]{@{}c@{}}AWS \\ Cloud\end{tabular}} &
   Workspace \\ \hline
@@ -456,8 +476,8 @@ El presupuesto corresponde a un estimado en dólares, considerando un costo por 
 \begin{tabular}{|c|c|c|c|c|}
 \hline
 Categoría & Detalle                  & Cantidad & Valor unitario (Dólares) & Costo (Dólares) \\ \hline
-          & Horas de Ingeniería      & 790      & 4.64                     & 3665.6          \\ \cline{2-5} 
-          & Módulo xDOT              & 1        & 7.3                      & 7.3             \\ \cline{2-5} 
+          & Horas de Ingeniería      & 790      & 4,64                     & 3665,6          \\ \cline{2-5} 
+          & Módulo xDOT              & 1        & 7,3                      & 7,3             \\ \cline{2-5} 
           & Módulo GPS               & 1        & 38                       & 38              \\ \cline{2-5} 
           & Módulo Regulador         & 1        & 18                       & 18              \\ \cline{2-5} 
           & Componentes electrónicos & -        & 38                       & 38              \\ \cline{2-5} 
@@ -465,11 +485,11 @@ Categoría & Detalle                  & Cantidad & Valor unitario (Dólares) & C
           & Fabricación de gabinete  & 1        & 33                       & 33              \\ \cline{2-5} 
 \multirow{-8}{*}{\begin{tabular}[c]{@{}c@{}}Costos\\ Directos\end{tabular}}    & Montaje del prototipo         & -         & 10        & 10                             \\ \hline
 \rowcolor[HTML]{FFFFC7} 
-\multicolumn{4}{|c|}{\cellcolor[HTML]{FFFFC7}Subtotal}                     & 3859.9          \\ \hline
-          & \multicolumn{3}{c|}{30\% de los costos directos}               & 1157.97          \\ \cline{2-5} 
-\multirow{-2}{*}{\begin{tabular}[c]{@{}c@{}}Costos \\ Indirectos\end{tabular}} & \multicolumn{3}{c|}{\cellcolor[HTML]{FFFFC7}Subtotal} & \cellcolor[HTML]{FFFFC7}938.97 \\ \hline
+\multicolumn{4}{|c|}{\cellcolor[HTML]{FFFFC7}Subtotal}                     & 3859,9          \\ \hline
+          & \multicolumn{3}{c|}{30\% de los costos directos}               & 1157,97          \\ \cline{2-5} 
+\multirow{-2}{*}{\begin{tabular}[c]{@{}c@{}}Costos \\ Indirectos\end{tabular}} & \multicolumn{3}{c|}{\cellcolor[HTML]{FFFFC7}Subtotal} & \cellcolor[HTML]{FFFFC7}938,97 \\ \hline
 \rowcolor[HTML]{FFCE93} 
-\multicolumn{4}{|c|}{\cellcolor[HTML]{FFCE93}Total}                        & 5017.87         \\ \hline
+\multicolumn{4}{|c|}{\cellcolor[HTML]{FFCE93}Total}                        & 5017,87         \\ \hline
 \end{tabular}
 \end{table}
 
@@ -498,11 +518,11 @@ Categoría & Detalle                  & Cantidad & Valor unitario (Dólares) & C
 1.3. & \begin{tabular}[c]{@{}c@{}}Elaboración de \\ la planificación \\ de proyecto\end{tabular} & P &   &   &   \\ \hline
 2.1. & \begin{tabular}[c]{@{}c@{}}Diseño de la \\ estructura del \\ sistema\end{tabular}         & P &   & C & C \\ \hline
 2.2. & \begin{tabular}[c]{@{}c@{}}Diseño preliminar \\ del circuito\end{tabular}                 & P & C & C & C \\ \hline
-2.3. & \begin{tabular}[c]{@{}c@{}}Selección de \\ componentes\end{tabular}                       & P &   & A & A \\ \hline
+2.3. & \begin{tabular}[c]{@{}c@{}}Selección de \\ componentes\end{tabular}                       & P &   & I & A \\ \hline
 2.4. & \begin{tabular}[c]{@{}c@{}}Elaboración del \\ circuito \\ esquemático\end{tabular}        & P & C &   &   \\ \hline
 2.5. & \begin{tabular}[c]{@{}c@{}}Análisis preliminar \\ de consumo\end{tabular}                 & P & C &   &   \\ \hline
-2.6. & Diseño de PCB                                                                             & P &  & A & A \\ \hline
-2.7. & \begin{tabular}[c]{@{}c@{}}Dimensionado del \\ prototipo físico\end{tabular}              & P &   & A & A \\ \hline
+2.6. & Diseño de PCB                                                                             & P &  & I & A \\ \hline
+2.7. & \begin{tabular}[c]{@{}c@{}}Dimensionado del \\ prototipo físico\end{tabular}              & P &   & I & A \\ \hline
 3.   & \begin{tabular}[c]{@{}c@{}}Desarrollo de \\ firmware\end{tabular}                         & P & C & C & C \\ \hline
 4.   & Producción                                                                                & P & C & I & I \\ \hline
 5.   & Testing                                                                                   & P & C & I & I \\ \hline
@@ -526,87 +546,206 @@ Referencias:
 \section{12. Gestión de riesgos}
 \label{sec:riesgos}
 
-\begin{consigna}{red}
-a) Identificación de los riesgos (al menos cinco) y estimación de sus consecuencias:
- 
-Riesgo 1: detallar el riesgo (riesgo es algo que si ocurre altera los planes previstos)
-\begin{itemize}
-\item Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).\\
-Justificar el motivo por el cual se asigna determinado número de severidad (S).
-\item Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).\\
-Justificar el motivo por el cual se asigna determinado número de (O). 
-\end{itemize}   
+Los riesgos se cuantifican en la escala de 1 al 10 siendo 1 la severidad (S)
+o probabilidad de ocurrencia (O) más baja y 10 la más alta.
 
-Riesgo 2:
-\begin{itemize}
-\item Severidad (S): 
-\item Ocurrencia (O):
-\end{itemize}
+a) Identificación de los riesgos. 
 
-Riesgo 3:
-\begin{itemize}
-\item Severidad (S): 
-\item Ocurrencia (O):
-\end{itemize}
+	
+- \textbf{Riesgo 1:} Incumplimientos de los plazos de entrega.
+	
+	- Severidad (10): Implicaría no terminar la especialización y extender mas de lo necesario la fecha de entregables.
+	
+	- Probabilidad de ocurrencia (3): Se cuenta con el tiempo y el respaldo de personal con gran experiencia y organización.
 
+- \textbf{Riesgo 2:} Incumplimientos de los requerimientos.
+	
+	- Severidad (10): Se cuenta con la entrega de un prototipo funcional y completamente integrado con la infraestructura ya existente de la empresa, por lo que el total o parcial incumplimiento de los mismos conllevaría a replantear el proyecto y existir la posibilidad de incumplir con los plazos de entrega. 
+	
+	- Probabilidad de ocurrencia (3): Se buscará siempre cumplir con los requerimientos de forma ordenada acorde a las tareas del proyecto.  
+	
+- \textbf{Riesgo 3:} Errores de diseño/fabricación en el PCB del prototipo.
+	
+	- Severidad (10): Un error de fabricación o diseño implica volver a la etapa de diseño,repetir el proceso fabricación del PCB y afrontar un mayor coste económico. 
+	
+	- Probabilidad de ocurrencia (5): El diseño del PCB se somete a varias etapas de revisión y aprobación. Al mismo tiempo, también se cuenta con el cumplimiento de los grados de calidad que garantiza el fabricante.  
+	
+- \textbf{Riesgo 4:} Caída generalizada de la infraestructura LoRa.
+	
+	- Severidad (8): Una falla de este tipo implica retrasos en las fases de testing, afectando las tareas posteriores y peligrando el cumplimento de los plazos de entrega. 
+	
+	- Probabilidad de ocurrencia (1): El sistema existente es estable y está sujeto a permanente mantenimiento. 
+	
+- \textbf{Riesgo 5:} Imposibilidad de acceder a los datos alojados en AWS Cloud. 
+	
+	- Severidad (8): Retrasaría el desarrollo de los algoritmos pensados para la aplicación afectando las tareas posteriores y peligrando el cumplimento de los plazos de entrega. 
+	
+	- Probabilidad de ocurrencia (1): Existen herramientas confiables e integradas con el sistema de AWS Cloud que confían plenamente el acceso a los datos. 
 
-b) Tabla de gestión de riesgos:      (El RPN se calcula como RPN=SxO)
+- \textbf{Riesgo 6:} Avería fatal en el prototipo.
+	
+	- Severidad (10): Implicaría un cambio total en los alcances, tiempos y presupuesto del proyecto. 
+	
+	- Probabilidad de ocurrencia (5): Durante las fases de testing el prototipo estará sometido a distintas condiciones de funcionamiento que podrían comprometer su integridad. 
+
+b) Tabla de gestión de riesgos:
+
+- El RPN se calcula como RPN=SxO.
 
 \begin{table}[htpb]
 \centering
-\begin{tabularx}{\linewidth}{@{}|X|c|c|c|c|c|c|@{}}
+\begin{tabularx}{\linewidth}{|X|X|X|X|X|X|X|}
 \hline
 \rowcolor[HTML]{C0C0C0} 
 Riesgo & S & O & RPN & S* & O* & RPN* \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
-       &   &   &     &    &    &      \\ \hline
+ 1      & 10 & 5  & \cellcolor [HTML] {FF3600} 50 &10  &2   & \cellcolor [HTML] {7CFC4F} 20    \\ \hline
+ 2      & 10 & 3  & \cellcolor [HTML] {FC8E4F} 30 &10  &2   & \cellcolor [HTML] {7CFC4F} 20    \\ \hline
+ 3      & 10 & 5  & \cellcolor [HTML] {FF3600} 50 &10  &2   & \cellcolor [HTML] {7CFC4F} 20    \\ \hline
+ 4      & 8  & 1  & \cellcolor [HTML] {7CFC4F} 8  &  &   & \\ \hline
+ 5      & 8  & 1  & \cellcolor [HTML] {7CFC4F} 8  &  &   & \\ \hline
+ 6      & 10 & 5  & \cellcolor [HTML] {FF3600} 50 &10  &2   & \cellcolor [HTML] {7CFC4F} 20   \\ \hline
 \end{tabularx}%
 \end{table}
 
-Criterio adoptado: 
-Se tomarán medidas de mitigación en los riesgos cuyos números de RPN sean mayores a...
+Criterio adoptado:
+	- Se tomarán medidas de mitigación en los riesgos cuyo RPN sea mayor o igual a 30.
 
 Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplicado la mitigación.
 
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
  
-Riesgo 1: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
-  Nueva asignación de S y O, con su respectiva justificación:
-  - Severidad (S): mientras más severo, más alto es el número (usar números del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de severidad (S).
-  - Probabilidad de ocurrencia (O): mientras más probable, más alto es el número (usar del 1 al 10).
-          Justificar el motivo por el cual se asigna determinado número de (O).
+- \textbf{Riesgo 1:} Incumplimientos de los plazos de entrega.
+	
+	- Plan de mitigación: Se establecerán reuniones periódicas (cada 15 días) para realizar un seguimiento continuo sobre el estado y avance del proyecto. 
+	
+	- Severidad (10): Se mantiene igual, el impacto sigue siendo elevado.
+	
+	- Probabilidad de ocurrencia (2): La planificación de reuniones periódicas disminuye la probabilidad de ocurrencia. 
 
-Riesgo 2: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
- 
-Riesgo 3: plan de mitigación (si por el RPN fuera necesario elaborar un plan de mitigación).
+- \textbf{Riesgo 2:} Incumplimientos de los requerimientos.
+	
+	- Plan de mitigación: Se opta como estrategia de desarrollo ir cumpliendo uno a uno con los requerimientos. Al mismo tiempo se efectuara una validación y aprobación por parte de la empresa antes de continuar con el siguiente.
+	
+	- Severidad (10): No cambia, no cumplir con un requerimientos sigue afectando el proyecto. 
+	
+	- Probabilidad de ocurrencia (2): Se reduce debido a que enfocando uno a uno el esfuerzo por cumplir los requerimientos disminuye su probabilidad.
 
-\end{consigna}
+- \textbf{Riesgo 3:} Errores de diseño/fabricación en el PCB del prototipo.
+	
+	- Plan de mitigación: Se implementara una etapa de control, validación y aprobación por todas las partes que competen al proyecto antes de hacer el pedido del prototipo, al mismo tiempo se solicitarán 2 (dos) PCB's de manera de tratar de mitigar aun mas la variable de calidad que implica al fabricante. 
+	
+	- Severidad (10): Se mantiene ya que sigue siendo un riesgo critico para el proyecto. 
+	
+	- Probabilidad de ocurrencia (2): Se reduce la probabilidad de ocurrencia pero no se descarta que aun así, haya alguna falla en el proceso de fabricación.  
 
-
+- \textbf{Riesgo 6:} Avería fatal en el prototipo.
+	
+	- Plan de mitigación: Se establecerán procedimientos de testing que impacten lo menos posible sobre la integridad del prototipo.
+	
+	- Severidad (10): Se mantiene, sigue siendo un riesgo critico para el proyecto.  
+	
+	- Probabilidad de ocurrencia (2): Se reduce pero no se descartan imprevistos en la prueba de campo. 
+	
 \section{13. Gestión de la calidad}
 \label{sec:calidad}
 
-\begin{consigna}{red}
-Para cada uno de los requerimientos del proyecto indique:
-\begin{itemize} 
-\item Req \#1: copiar acá el requerimiento.
-
-Verificación y validación:
-
+1. Requerimientos generales del proyecto.
 \begin{itemize}
-\item Verificación para confirmar si se cumplió con lo requerido antes de mostrar el sistema al cliente. Detallar 
-\item Validación con el cliente para confirmar que está de acuerdo en que se cumplió con lo requerido. Detallar  
+	\item Verificación: En la planificación se estimó una finalización que está basada en el tiempo de desarrollo de las distintas tareas y se establecieron los entregables del proyecto.
+	\item Validación: Al finalizar el proyecto se hará una comparación entre la planificación y los tiempos reales de ejecución. 
 \end{itemize}
 
+2. Requerimientos físicos del sistema.
+\begin{itemize}
+	\item Verificación: Se estudiará el uso de materiales y estructuras que permitan cumplir los requerimientos.  
+	\item Validación: Se medirá el peso del prototipo y se someterá a condiciones extremas. 
 \end{itemize}
 
-Tener en cuenta que en este contexto se pueden mencionar simulaciones, cálculos, revisión de hojas de datos, consulta con expertos, mediciones, etc.
+3.1.1. Contará con pines de acceso para el cargado de firmware.
+\begin{itemize}
+	\item Verificación: Se comprobará mediante la documentación del módulo xDOT. 
+	\item Validación: Se implementará en el diseño del PCB. 
+\end{itemize}
 
-\end{consigna}
+3.1.2. Envió de coordenadas GPS a través de enlace de radiofrecuencia LoRaWAN en banda AU915.
+\begin{itemize}
+	\item Verificación: Se comprobará mediante la lectura de documentación y diagramas esquemáticos del sistema. 
+	\item Validación: Se probará estableciendo la comunicación con el Gateway LoRa.  
+\end{itemize}
+
+3.1.3. Bajo consumo con autonomía mínima de 1 año.
+\begin{itemize}
+	\item Verificación: Se comprobará y estimara a partir de las hojas de datos de los distintos componentes y módulos del hardware. 
+	\item Validación: Se realizarán mediciones de consumo durante el funcionamiento del mismo. 
+\end{itemize}
+
+3.1.4. Entrada de recarga de batería por micro-USB.
+\begin{itemize}
+	\item Verificación: Se buscará un diseño de circuito de recarga. 
+	\item Validación: Se someterá el prototipo a un proceso de carga completo. 
+\end{itemize}
+
+3.1.5. Baja tasa de transferencia de datos. 
+\begin{itemize}
+	\item Verificación: Se estudiará a partir de las hojas de datos y documentación como optimizar la transmisión de datos. 
+	\item Validación: Se realizaran pruebas de transmisión bajo condiciones limites de comunicación. 
+\end{itemize}
+
+3.1.6. Bajo costo, se busca competitividad en el mercado.
+\begin{itemize}
+	\item Verificación: Se exploraran las opciones mas confiables y económicas posibles. 
+	\item Validación: Al finalizar el proyecto se hará una estimación real de lo que costo el proyecto y se comparara con la competencia existente. 
+\end{itemize}
+
+3.2.1. Almacenamiento de la información recolectada en la plataforma AWS Cloud. 
+\begin{itemize}
+	\item Verificación: Se elaborará una estrategia de transmisión de datos a través de la infraestructura LoRa para garantizar el envió y almacenamiento de datos al Cloud. 
+	\item Validación: Se verificará la llegada de los datos a través de una cuenta de prueba en AWS Cloud. 
+\end{itemize}
+
+3.2.2. Validación de usuario con la plataforma de Smartium.
+\begin{itemize}
+	\item Verificación: Se dispondrá de una cuenta habilitada y se estudiarán los mecanismos y herramientas para su implementación. 
+	\item Validación: Se realizará un login desde la aplicación. 
+\end{itemize}
+
+3.2.3. Creación y asociación de nuevos animales donde se podrán cargar identificadores únicos, tipo, nombre, fecha, etc. 
+\begin{itemize}
+	\item Verificación: Se estudiaran los algoritmos y herramientas que se usaran para la implementación. 
+	\item Validación: Se agregaran nuevos nodos de transmisión y se probará la escalabilidad del sistema. 
+\end{itemize}
+
+3.2.4. Cálculo de distancia recorrida por el animal de forma diaria, cada tres días y semanales. 
+\begin{itemize}
+	\item Verificación: Se estudiaran los algoritmos y herramientas que se usaran para la implementación. 
+	\item Validación: Se realizaran pruebas de transmisión durante varios días para comprobar el cumplimiento del requerimiento y el correcto funcionamiento de los algoritmos implementados. 
+\end{itemize}
+
+3.2.5. Creación de zonas georeferenciadas para establecer si un animal está fuera del territorio. 
+\begin{itemize}
+	\item Verificación: Se estudiara el uso de Google Maps y los algoritmos necesarios para implementarlo en el sistema. 
+	\item Validación: Se realizarán pruebas sobre distintos territorios y se ubicarán geográficamente en un mapa en la aplicación. 
+\end{itemize}
+
+3.2.6. Visualización de la última posición de los animales asociados a un usuario junto con su respectivo historial de ubicación. 
+\begin{itemize}
+	\item Verificación: Se estudiaran los algoritmos y se diseñará una estructura visual acorde que respete el diseño ya existente. 
+	\item Validación: Se comparará el diseño con el ya existente y se realizarán mediciones para probar la correcta visualización de la información que solicita el requerimiento. 
+\end{itemize}
+
+3.2.7. Plataforma compatible con AWS Cloud.
+\begin{itemize}
+	\item Verificación: Se estudiarán todos los algoritmos y reglas necesarias para integrarse completamente con el servicio de AWS Cloud. 
+	\item Validación: Se verificará la integración con AWS Cloud en todas secciones de la aplicación que se relacionen con ella. 
+\end{itemize}
+
+4. Requerimientos de la documentación.
+\begin{itemize}
+	\item Verificación: Se dedicará el tiempo a la elaboración de todos los documentos requeridos.  
+	\item Validación: Se evaluaran todos los entregables en el desarrollo del proyecto. 
+\end{itemize}
+
+\vspace{250px}
 
 \section{14. Comunicación del proyecto}
 \label{sec:comunicaciones}
@@ -615,38 +754,32 @@ El plan de comunicación del proyecto es el siguiente:
 
 \begin{table}[htpb]
 \centering
-\begin{tabularx}{\linewidth}{@{}|X|C{2.4cm}|C{3cm}|C{1.8cm}|C{2cm}|C{2.1cm}|@{}}
+\begin{tabularx}{\linewidth}{|X|C{1.8cm}|C{3cm}|C{1.8cm}|C{2cm}|C{2.1cm}|}
 \hline
 \rowcolor[HTML]{C0C0C0} 
 \multicolumn{6}{|c|}{\cellcolor[HTML]{C0C0C0}PLAN DE COMUNICACIÓN DEL PROYECTO}           \\ \hline
 \rowcolor[HTML]{C0C0C0} 
 ¿Qué comunicar? & Audiencia & Propósito & Frecuencia & Método de comunicac. & Responsable \\ \hline
-                &           &           &            &                      &             \\ \hline
-                &           &           &            &                      &             \\ \hline
-                &           &           &            &                      &             \\ \hline
-                &           &           &            &                      &             \\ \hline
-                &           &           &            &                      &             \\ \hline
+Proceso de planificación e iniciación  & Todos los interesados & Información y validación & Única vez & Reunión o email & Christian Canaan Castro Botek            \\ \hline
+Avance del proyecto & Director, Colaborador & Registro de evolución del proyecto    & Quincena    & Reunión o email   & Christian Canaan Castro Botek             \\ \hline
+Consultas  & Director, Colaborador & Búsqueda de información y soluciones         &  Cuando sea necesario  &  Reunión o email  & Christian Canaan Castro Botek            \\ \hline
+Finalización y cierre & Todos los interesados   & Registro de finalización        & Al concluir el proyecto  &  Reunión o email & Christian Canaan Castro Botek            \\ \hline
+
 \end{tabularx}
 \end{table}
 
 \section{15. Gestión de compras}
 \label{sec:compras}
 
-\begin{consigna}{red}
-En caso de tener que comprar elementos o contratar servicios:
-a) Explique con qué criterios elegiría a un proveedor.
-b) Redacte el Statement of Work correspondiente.
-\end{consigna}
+Las compras de componentes electrónicos, fabricación del PCB y fabricación del gabinete se realizan a través de proveedores y el departamento de diseño de la empresa, por lo cual no se prevé compras ni gastos extraordinarios.
+
+\vspace{290px}
+ 
 
 \section{16. Seguimiento y control}
 \label{sec:seguimiento}
 
-\begin{consigna}{red}
-Para cada tarea del proyecto establecer la frecuencia y los indicadores con los se seguirá su avance y quién será el responsable de hacer dicho seguimiento y a quién debe comunicarse la situación (en concordancia con el Plan de Comunicación del proyecto).
 
-El indicador de avance tiene que ser algo medible, mejor incluso si se puede medir en \% de avance. Por ejemplo,se pueden indicar en esta columna cosas como ``cantidad de conexiones ruteadeas'' o ``cantidad de funciones implementadas'', pero no algo genérico y ambiguo como ``\%'', porque el lector no sabe porcentaje de qué cosa.
-
-\end{consigna}
 
 \begin{longtable}{|m{1cm}|m{3.5cm}|m{2.2cm}|m{2cm}|m{3cm}|m{1.5cm}|}
 \hline
@@ -668,45 +801,55 @@ Tarea del WBS 			& Indicador de avance & Frecuencia de reporte & Resp. de seguim
 
 \endlastfoot
 
-1.1	& Fecha de inicio  & Única vez al comienzo & \authorname & \clientename, \supname & email \\ \hline
-2.1	& Avance de las subtareas  & Mensual mientras dure la tarea & \authorname & \clientename, \supname & email \\ \hline
-
+1.	& \% de avance & Semanal & \authorname & Osvaldo P. Ivani, Jhonattan Camargo, Patricio Bos & Reunión, email \\ \hline
+2.	& \% de avance & Quincenal mientras dure la tarea & \authorname & Osvaldo P. Ivani, Jhonattan Camargo & Reunión, email \\ \hline
+3.	& \% de avance & Semanal mientras dure la tarea & \authorname & Osvaldo P. Ivani, Jhonattan Camargo & Reunión, email \\ \hline
+4.	& \% de avance & Quincenal mientras dure la tarea & \authorname & Osvaldo P. Ivani, Jhonattan Camargo & Reunión, email \\ \hline
+5.	& \% de avance  & Semanal mientras dure la tarea & \authorname & Osvaldo P. Ivani, Jhonattan Camargo & Reunión, email \\ \hline
+6.	& \% de avance & Semanal mientras dure la tarea & \authorname & Osvaldo P. Ivani, Jhonattan Camargo & Reunión, email \\ \hline
+7.	& \% de avance  & Semanal mientras dure la tarea & \authorname & Osvaldo P. Ivani, Jhonattan Camargo & Reunión, email \\ \hline
+8.	& \% de avance  & Semanal mientras dure la tarea & \authorname & Osvaldo P. Ivani, Jhonattan Camargo, Docentes & Reunión, email \\ \hline
 \end{longtable}
 
-\begin{table}[!htpb]
-\centering
+%\begin{table}[!htpb]
+%\centering
 %\begin{tabularx}{\linewidth}{@{}|X|X|X|X|X|X|@{}}
-\begin{tabularx}{\linewidth}{@{}|X|C{2.5cm}|C{3cm}|C{2cm}|C{2cm}|C{2.5cm}|@{}}
-\hline
-\rowcolor[HTML]{C0C0C0} 
-\multicolumn{6}{|c|}{\cellcolor[HTML]{C0C0C0}SEGUIMIENTO DE AVANCE}                                                                       \\ \hline
-\rowcolor[HTML]{C0C0C0} 
-Tarea del WBS & Indicador de avance & Frecuencia de reporte & Resp. de seguimiento & Persona a ser informada & Método de comunic. \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
- &  &  &  &  &  \\ \hline
-\end{tabularx}%
+%\begin{tabularx}{\linewidth}{@{}|X|C{2.5cm}|C{3cm}|C{2cm}|C{2cm}|C{2.5cm}|@{}}
+%\hline
+%\rowcolor[HTML]{C0C0C0} 
+%\multicolumn{6}{|c|}{\cellcolor[HTML]{C0C0C0}SEGUIMIENTO DE AVANCE}                                                                       \\ \hline
+%\rowcolor[HTML]{C0C0C0} 
+%Tarea del WBS & Indicador de avance & Frecuencia de reporte & Resp. de seguimiento & Persona a ser informada & Método de comunic. \\ \hline
+%1. &  &  &  & Osvaldo P. Ivani, Jhonattan Camargo, Patricio Bos  & Reunión, e-mail \\ \hline
+% &  &  &  &  &  \\ \hline 
+%\end{tabularx}%
 %}
-\end{table}
+%\end{table}
 
 \section{17. Procesos de cierre}    
 \label{sec:cierre}
 
-\begin{consigna}{red}
-Establecer las pautas de trabajo para realizar una reunión final de evaluación del proyecto, tal que contemple las siguientes actividades:
+Todo el proceso de cierre estará a cargo de \authorname.
 
 \begin{itemize}
 \item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:
- - Indicar quién se ocupará de hacer esto y cuál será el procedimiento a aplicar. 
+	\begin{itemize}
+	\item Se evaluaran los requerimientos del proyecto y se compararan los objetivos planteados con el plan de trabajo inicial. 
+	\item Se resaltaran los cumplimientos en cuanto a reportes, tiempos de entrega y ejecución. 
+	\end{itemize}
+
 \item Identificación de las técnicas y procedimientos útiles e inútiles que se utilizaron, y los problemas que surgieron y cómo se solucionaron:
- - Indicar quién se ocupará de hacer esto y cuál será el procedimiento para dejar registro.
-\item Indicar quién organizará el acto de agradecimiento a todos los interesados, y en especial al equipo de trabajo y colaboradores:
-  - Indicar esto y quién financiará los gastos correspondientes.
+	\begin{itemize}
+	\item Se indicará el porcentaje de uso de las distintas herramientas utilizadas y se compararan con la matriz de uso de recursos para valorar su impacto real en el proyecto. 
+	\item Se destacará el uso de herramientas o procedimientos que no hayan sido contemplados durante la planificación. 
+	\end{itemize}
+
+\item Presentación y agradecimientos finales:
+	\begin{itemize}
+	\item Se hará una presentación formal del proyecto finalizado frente a todas las autoridades y responsables que la CEIoT establece contrastando la planificación elaborada con la memoria técnica final del proyecto. 
+	\item Finalizada la presentación se procederá a agradecer al todo el personal directamente involucrado, compañeros y autoridades de CEIoT y de Smartium por la posibilidad de participar y trabajar en el desarrollo de un proyecto real. 
+	
+	\end{itemize}
 \end{itemize}
-
-\end{consigna}
-
 
 \end{document}
