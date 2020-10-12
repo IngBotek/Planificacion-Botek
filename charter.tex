@@ -67,6 +67,7 @@ Revisión & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Detalles de los cambios 
 1.2      & Se aplicaron correcciones y se agregaron las historias de usuario. & 14/09/2020 \\ \hline
 1.3      & Se aplicaron correcciones y se completaron los puntos de 7 al 11.                                                 & 21/09/2020 \\ \hline
 1.4      & Se aplicaron correcciones y se completaron los puntos de 12 al 17.                                                 & 28/09/2020 \\ \hline
+1.5      & Se aplicaron correcciones & 05/10/2020 \\ \hline
 \end{tabularx}
 \end{table}
 
@@ -83,7 +84,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un sistema de rastreo, seguimiento y control de ganado, y tendrá un presupuesto preliminar estimado de 790 hs de trabajo y \textcolor{red}{\$XXX}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
+Por medio de la presente se acuerda con el Ing. \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'', consistirá esencialmente en el prototipo preliminar de un sistema de rastreo, seguimiento y control de ganado, y tendrá un presupuesto preliminar estimado de 790 hs de trabajo y \textcolor{red}{u\$d5017,87}, con fecha de inicio \fechaInicioName\hspace{1px} y fecha de presentación pública \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -167,7 +168,7 @@ El propósito de este proyecto es desarrollar el prototipo de un sistema autóno
 \section{2. Alcance del proyecto}
 \label{sec:alcance}
 
-El alcance de este proyecto incluirá un prototipo de hardware capaz de transmitir la posición a través de la red de comunicación LoRa y el desarrollo de una aplicación integrada con AWS cloud capaz de utilizar estos datos para mostrarlos en pantalla. Al mismo tiempo no contempla la conexión desde el Gateway hasta el servidor de Aplicación, la capacitación del usuario para hacer uso de la aplicación ni el diseño 3D del gabinete del collar. 
+El alcance de este proyecto incluirá un prototipo de hardware capaz de transmitir la posición a través de la red de comunicación LoRaWAN y el desarrollo de una aplicación integrada con AWS cloud capaz de utilizar estos datos para mostrarlos en pantalla. Al mismo tiempo no contempla la conexión desde el Gateway hasta el servidor de Aplicación, la capacitación del usuario para hacer uso de la aplicación ni el diseño 3D del gabinete del collar. 
 
 
 \section{3. Supuestos del proyecto}
@@ -352,31 +353,36 @@ Calificación: Ponderación - Prioridad.
 
 Cantidad total de horas: (790)
  
-
+\vspace{600px}
 
 \section{7. Diagrama de Activity On Node}
 \label{sec:AoN}
 
 Los tiempos del diagrama de la Fig.2 están en horas con excepción de las fechas de inicio y fin.
 
+La tarea 4.1 podría sufrir retrasos por lo que se la considera un camino potencialmente crítico. 
+
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=.91\textwidth]{./Figuras/AoNb3.png}
+\includegraphics[width=.9\textwidth]{./Figuras/AoNb3.png}
 \caption{Diagrama en \textit{Activity on Node}}
 \label{fig:AoN}
 \end{figure}
 
-La tarea 4.1 podría sufrir retrasos por lo que se la considera un camino potencialmente crítico. 
-
-\vspace{20px}
-
+\vspace{10px}
 
 \section{8. Diagrama de Gantt}
 \label{sec:gantt}
 
+\begin{itemize}
+	\item Las tareas en negro indican tareas generales. 
+	\item Las tareas en azul indican sub-tareas.
+	\item Las tareas en rojo indican inactividad por vacaciones.
+\end{itemize}
+
 \begin{figure}[htpb]
 \centering 
-\includegraphics[width=1\textwidth]{./Figuras/GanttIoT_tabla.png}
+\includegraphics[width=.9\textwidth]{./Figuras/GanttIoT_tabla.png}
 \caption{Diagrama en \textit{Tabla de WBS}}
 \label{fig:AoN}
 \end{figure}
@@ -390,44 +396,12 @@ La tarea 4.1 podría sufrir retrasos por lo que se la considera un camino potenc
 \end{figure}
 
 
-
-\begin{itemize}
-	\item Las tareas en negro indican tareas generales. 
-	\item Las tareas en azul indican sub-tareas.
-	\item Las tareas en rojo indican inactividad por vacaciones.
-\end{itemize}
-
-
 \section{9. Matriz de uso de recursos de materiales}
 \label{sec:recursos}
-
-%\begin{table}
-%\label{tab:recursos}
-%\centering
-%\begin{tabularx}{\linewidth}{@{}|c|X|X|X|X|X|X|c|@{}}
-%\hline
-%\cellcolor[HTML]{C0C0C0} & \cellcolor[HTML]{C0C0C0} & \multicolumn{6}{c|}{\cellcolor[HTML]{C0C0C0}Recursos requeridos (expresado en horas)} \\ \cline{4-6} 
-%\multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Código\\ WBS\end{tabular}} & \multirow{-2}{*}{\cellcolor[HTML]{C0C0C0}\begin{tabular}[c]{@{}c@{}}Nombre \\ tarea\end{tabular}} & PC & xDot-DK & Prototipo & Gateway & AWS Cloud & Workspace\\ \hline
-% 1.&  Análisis inicial&  130&  -&  -&  -& -& \\ \hline
-% 2.4.& Elaboración del circuito esquemático &  &  &  &  & & \\ \hline
-% 2.6.& Diseño de PCB &  &  &  &  & &\\ \hline
-% 2.8.& Elaboración de protocolos de transmisión &  &  &  &  & &\\ \hline
-% 3.& Producción &  &  &  &  & &\\ \hline 
-% 4.& Testing &  &  &  &  & &\\ \hline
-% 5.2& Comunicación y permisos con la nube &  &  &  &  & &\\ \hline
-% 5.3.& Desarrollo del login de usuario &  &  &  &  & &\\ \hline
-% 5.4.& Comprobación de comunicación y login correctos  &  &  &  &  & &\\ \hline
-% 5.5.& Desarrollo de interfaz de usuario &  &  &  &  & &\\ \hline
-% 5.6.& Desarrollo de algoritmos de historial de ubicación &  &  &  &  & &\\ \hline
-% 6.& Ensayos sobre la aplicación &  &  &  &  & &\\ \hline
-% 7.& Cierre de proyecto &  &  &  &  & &\\ \hline
-%\end{tabularx}%
-%\end{table}
 
 
 \begin{table}[h]
 \label{tab:recursos}
-%\begin{tabular}{\linewidth}{@{}|c|X|X|X|X|X|X|c|@{}}
 \begin{tabular}{|l|c|l|l|l|l|l|l|}
 \hline
 \multicolumn{1}{|c|}{\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Código\\  WBS\end{tabular}}} &
@@ -467,7 +441,7 @@ La tarea 4.1 podría sufrir retrasos por lo que se la considera un camino potenc
 \section{10. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
-El presupuesto corresponde a un estimado en dólares, considerando un costo por hora de ingeniería de AR\$350 (u\$d4.64) y un aproximado de costos indirectos del 30\% de los costos directos. No fue incluido ni considerado el costo del Gateway ni del servicio de AWS Cloud. 
+El presupuesto corresponde a un estimado en dólares, considerando un costo por hora de ingeniería de AR\$350 (u\$d4,64) y un aproximado de costos indirectos del 30\% de los costos directos. No fue incluido ni considerado el costo del Gateway ni del servicio de AWS Cloud. 
 
 \vspace{10px}
 
@@ -487,7 +461,7 @@ Categoría & Detalle                  & Cantidad & Valor unitario (Dólares) & C
 \rowcolor[HTML]{FFFFC7} 
 \multicolumn{4}{|c|}{\cellcolor[HTML]{FFFFC7}Subtotal}                     & 3859,9          \\ \hline
           & \multicolumn{3}{c|}{30\% de los costos directos}               & 1157,97          \\ \cline{2-5} 
-\multirow{-2}{*}{\begin{tabular}[c]{@{}c@{}}Costos \\ Indirectos\end{tabular}} & \multicolumn{3}{c|}{\cellcolor[HTML]{FFFFC7}Subtotal} & \cellcolor[HTML]{FFFFC7}938,97 \\ \hline
+\multirow{-2}{*}{\begin{tabular}[c]{@{}c@{}}Costos \\ Indirectos\end{tabular}} & \multicolumn{3}{c|}{\cellcolor[HTML]{FFFFC7}Subtotal} & \cellcolor[HTML]{FFFFC7}1157,97 \\ \hline
 \rowcolor[HTML]{FFCE93} 
 \multicolumn{4}{|c|}{\cellcolor[HTML]{FFCE93}Total}                        & 5017,87         \\ \hline
 \end{tabular}
@@ -510,12 +484,12 @@ Categoría & Detalle                  & Cantidad & Valor unitario (Dólares) & C
  &
    &
   \begin{tabular}[c]{@{}c@{}}Christian \\ Canaan \\ Castro Botek\end{tabular} &
-  \begin{tabular}[c]{@{}c@{}}Nombre del \\ Director\end{tabular} &
+  \begin{tabular}[c]{@{}c@{}}Mg. Ing.  \\ Osvaldo \\ P. Ivani \end{tabular} &
   \begin{tabular}[c]{@{}c@{}}Esp. Ing. \\ Jhonattan\\  Camargo\end{tabular} &
   \begin{tabular}[c]{@{}c@{}}Mg. Ing. \\ Osvaldo \\ P. Ivani\end{tabular} \\ \hline
 1.1. & \begin{tabular}[c]{@{}c@{}}Lectura de Ref. \\ Bibliográficas\end{tabular}                 & P &   &   &   \\ \hline
 1.2. & \begin{tabular}[c]{@{}c@{}}Análisis de las \\ herramientas \\ de trabajo\end{tabular}     & P &   & C & C \\ \hline
-1.3. & \begin{tabular}[c]{@{}c@{}}Elaboración de \\ la planificación \\ de proyecto\end{tabular} & P &   &   &   \\ \hline
+1.3. & \begin{tabular}[c]{@{}c@{}}Elaboración de \\ la planificación \\ de proyecto\end{tabular} & P & A &   &   \\ \hline
 2.1. & \begin{tabular}[c]{@{}c@{}}Diseño de la \\ estructura del \\ sistema\end{tabular}         & P &   & C & C \\ \hline
 2.2. & \begin{tabular}[c]{@{}c@{}}Diseño preliminar \\ del circuito\end{tabular}                 & P & C & C & C \\ \hline
 2.3. & \begin{tabular}[c]{@{}c@{}}Selección de \\ componentes\end{tabular}                       & P &   & I & A \\ \hline
@@ -552,41 +526,41 @@ o probabilidad de ocurrencia (O) más baja y 10 la más alta.
 a) Identificación de los riesgos. 
 
 	
-- \textbf{Riesgo 1:} Incumplimientos de los plazos de entrega.
+- \textbf{Riesgo 1:} incumplimientos de los plazos de entrega.
 	
-	- Severidad (10): Implicaría no terminar la especialización y extender mas de lo necesario la fecha de entregables.
+	- Severidad (10): implicaría no terminar la especialización y extender más de lo necesario la fecha de entregables.
 	
-	- Probabilidad de ocurrencia (3): Se cuenta con el tiempo y el respaldo de personal con gran experiencia y organización.
+	- Probabilidad de ocurrencia (3): se cuenta con el tiempo y el respaldo de personal con gran experiencia y organización.
 
-- \textbf{Riesgo 2:} Incumplimientos de los requerimientos.
+- \textbf{Riesgo 2:} incumplimientos de los requerimientos.
 	
-	- Severidad (10): Se cuenta con la entrega de un prototipo funcional y completamente integrado con la infraestructura ya existente de la empresa, por lo que el total o parcial incumplimiento de los mismos conllevaría a replantear el proyecto y existir la posibilidad de incumplir con los plazos de entrega. 
+	- Severidad (10): se cuenta con la entrega de un prototipo funcional y completamente integrado con la infraestructura ya existente de la empresa, por lo que el total o parcial incumplimiento de los mismos conllevaría a replantear el proyecto y existir la posibilidad de incumplir con los plazos de entrega. 
 	
-	- Probabilidad de ocurrencia (3): Se buscará siempre cumplir con los requerimientos de forma ordenada acorde a las tareas del proyecto.  
+	- Probabilidad de ocurrencia (3): se buscará siempre cumplir con los requerimientos de forma ordenada acorde a las tareas del proyecto.  
 	
-- \textbf{Riesgo 3:} Errores de diseño/fabricación en el PCB del prototipo.
+- \textbf{Riesgo 3:} errores de diseño/fabricación en el PCB del prototipo.
 	
-	- Severidad (10): Un error de fabricación o diseño implica volver a la etapa de diseño,repetir el proceso fabricación del PCB y afrontar un mayor coste económico. 
+	- Severidad (10): un error de fabricación o diseño implica volver a la etapa de diseño, repetir el proceso fabricación del PCB y afrontar un mayor coste económico. 
 	
-	- Probabilidad de ocurrencia (5): El diseño del PCB se somete a varias etapas de revisión y aprobación. Al mismo tiempo, también se cuenta con el cumplimiento de los grados de calidad que garantiza el fabricante.  
+	- Probabilidad de ocurrencia (5): el diseño del PCB se somete a varias etapas de revisión y aprobación. Al mismo tiempo, también se cuenta con el cumplimiento de los grados de calidad que garantiza el fabricante.  
 	
-- \textbf{Riesgo 4:} Caída generalizada de la infraestructura LoRa.
+- \textbf{Riesgo 4:} caída generalizada de la infraestructura LoRaWAN.
 	
-	- Severidad (8): Una falla de este tipo implica retrasos en las fases de testing, afectando las tareas posteriores y peligrando el cumplimento de los plazos de entrega. 
+	- Severidad (8): una falla de este tipo implica retrasos en las fases de testing, lo que afecta las tareas posteriores y hace peligrar el cumplimento de los plazos de entrega. 
 	
-	- Probabilidad de ocurrencia (1): El sistema existente es estable y está sujeto a permanente mantenimiento. 
+	- Probabilidad de ocurrencia (1): el sistema existente es estable y está sujeto a permanente mantenimiento. 
 	
-- \textbf{Riesgo 5:} Imposibilidad de acceder a los datos alojados en AWS Cloud. 
+- \textbf{Riesgo 5:} imposibilidad de acceder a los datos alojados en AWS Cloud. 
 	
-	- Severidad (8): Retrasaría el desarrollo de los algoritmos pensados para la aplicación afectando las tareas posteriores y peligrando el cumplimento de los plazos de entrega. 
+	- Severidad (8): retrasaría el desarrollo de los algoritmos pensados para la aplicación afectando las tareas posteriores y peligrando el cumplimento de los plazos de entrega. 
 	
-	- Probabilidad de ocurrencia (1): Existen herramientas confiables e integradas con el sistema de AWS Cloud que confían plenamente el acceso a los datos. 
+	- Probabilidad de ocurrencia (1): existen herramientas confiables e integradas con el sistema de AWS Cloud que confían plenamente el acceso a los datos. 
 
-- \textbf{Riesgo 6:} Avería fatal en el prototipo.
+- \textbf{Riesgo 6:} avería fatal en el prototipo.
 	
-	- Severidad (10): Implicaría un cambio total en los alcances, tiempos y presupuesto del proyecto. 
+	- Severidad (10): implicaría un cambio total en los alcances, tiempos y presupuesto del proyecto. 
 	
-	- Probabilidad de ocurrencia (5): Durante las fases de testing el prototipo estará sometido a distintas condiciones de funcionamiento que podrían comprometer su integridad. 
+	- Probabilidad de ocurrencia (5): durante las fases de testing el prototipo estará sometido a distintas condiciones de funcionamiento que podrían comprometer su integridad. 
 
 b) Tabla de gestión de riesgos:
 
@@ -614,135 +588,135 @@ Nota: los valores marcados con (*) en la tabla corresponden luego de haber aplic
 
 c) Plan de mitigación de los riesgos que originalmente excedían el RPN máximo establecido:
  
-- \textbf{Riesgo 1:} Incumplimientos de los plazos de entrega.
+- \textbf{Riesgo 1:} incumplimientos de los plazos de entrega.
 	
-	- Plan de mitigación: Se establecerán reuniones periódicas (cada 15 días) para realizar un seguimiento continuo sobre el estado y avance del proyecto. 
+	- Plan de mitigación: se establecerán reuniones periódicas (cada 15 días) para realizar un seguimiento continuo sobre el estado y avance del proyecto. 
 	
-	- Severidad (10): Se mantiene igual, el impacto sigue siendo elevado.
+	- Severidad (10): se mantiene igual, el impacto sigue siendo elevado.
 	
-	- Probabilidad de ocurrencia (2): La planificación de reuniones periódicas disminuye la probabilidad de ocurrencia. 
+	- Probabilidad de ocurrencia (2): la planificación de reuniones periódicas disminuye la probabilidad de ocurrencia. 
 
-- \textbf{Riesgo 2:} Incumplimientos de los requerimientos.
+- \textbf{Riesgo 2:} incumplimientos de los requerimientos.
 	
-	- Plan de mitigación: Se opta como estrategia de desarrollo ir cumpliendo uno a uno con los requerimientos. Al mismo tiempo se efectuara una validación y aprobación por parte de la empresa antes de continuar con el siguiente.
+	- Plan de mitigación: se opta como estrategia de desarrollo ir cumpliendo uno a uno con los requerimientos. Al mismo tiempo se efectuará una validación y aprobación por parte de la empresa antes de continuar con el siguiente.
 	
-	- Severidad (10): No cambia, no cumplir con un requerimientos sigue afectando el proyecto. 
+	- Severidad (10): no cambia, no cumplir con un requerimientos sigue afectando el proyecto. 
 	
-	- Probabilidad de ocurrencia (2): Se reduce debido a que enfocando uno a uno el esfuerzo por cumplir los requerimientos disminuye su probabilidad.
+	- Probabilidad de ocurrencia (2): se reduce debido a que enfocando uno a uno el esfuerzo por cumplir los requerimientos disminuye su probabilidad.
 
-- \textbf{Riesgo 3:} Errores de diseño/fabricación en el PCB del prototipo.
+- \textbf{Riesgo 3:} errores de diseño/fabricación en el PCB del prototipo.
 	
-	- Plan de mitigación: Se implementara una etapa de control, validación y aprobación por todas las partes que competen al proyecto antes de hacer el pedido del prototipo, al mismo tiempo se solicitarán 2 (dos) PCB's de manera de tratar de mitigar aun mas la variable de calidad que implica al fabricante. 
+	- Plan de mitigación: se implementará una etapa de control, validación y aprobación por todas las partes que competen al proyecto antes de hacer el pedido del prototipo. Al mismo tiempo se solicitarán 3 (tres) PCB's de manera de tratar de mitigar aun más la variable de calidad que implica al fabricante. 
 	
-	- Severidad (10): Se mantiene ya que sigue siendo un riesgo critico para el proyecto. 
+	- Severidad (10): se mantiene ya que sigue siendo un riesgo crítico para el proyecto. 
 	
-	- Probabilidad de ocurrencia (2): Se reduce la probabilidad de ocurrencia pero no se descarta que aun así, haya alguna falla en el proceso de fabricación.  
+	- Probabilidad de ocurrencia (2): se reduce la probabilidad de ocurrencia pero no se descarta que aun así, al menos un PCB de los tres, pueda tener alguna falla en el proceso de fabricación. 
 
-- \textbf{Riesgo 6:} Avería fatal en el prototipo.
+- \textbf{Riesgo 6:} avería fatal en el prototipo.
 	
-	- Plan de mitigación: Se establecerán procedimientos de testing que impacten lo menos posible sobre la integridad del prototipo.
+	- Plan de mitigación: se establecerán procedimientos de testing que impacten lo menos posible sobre la integridad del prototipo.
 	
-	- Severidad (10): Se mantiene, sigue siendo un riesgo critico para el proyecto.  
+	- Severidad (10): se mantiene, sigue siendo un riesgo crítico para el proyecto.  
 	
-	- Probabilidad de ocurrencia (2): Se reduce pero no se descartan imprevistos en la prueba de campo. 
+	- Probabilidad de ocurrencia (2): se reduce pero no se descartan imprevistos en la prueba de campo. 
 	
 \section{13. Gestión de la calidad}
 \label{sec:calidad}
 
 1. Requerimientos generales del proyecto.
 \begin{itemize}
-	\item Verificación: En la planificación se estimó una finalización que está basada en el tiempo de desarrollo de las distintas tareas y se establecieron los entregables del proyecto.
-	\item Validación: Al finalizar el proyecto se hará una comparación entre la planificación y los tiempos reales de ejecución. 
+	\item Verificación: en la planificación se estimó una finalización que está basada en el tiempo de desarrollo de las distintas tareas y se establecieron los entregables del proyecto.
+	\item Validación: al finalizar el proyecto se hará una comparación entre la planificación y los tiempos reales de ejecución. 
 \end{itemize}
 
 2. Requerimientos físicos del sistema.
 \begin{itemize}
-	\item Verificación: Se estudiará el uso de materiales y estructuras que permitan cumplir los requerimientos.  
-	\item Validación: Se medirá el peso del prototipo y se someterá a condiciones extremas. 
+	\item Verificación: se estudiará el uso de materiales y estructuras que permitan cumplir los requerimientos.  
+	\item Validación: se medirá el peso del prototipo y se someterá a condiciones extremas. 
 \end{itemize}
 
-3.1.1. Contará con pines de acceso para el cargado de firmware.
+3.1.1. Contará con pines de acceso para la carga de firmware.
 \begin{itemize}
-	\item Verificación: Se comprobará mediante la documentación del módulo xDOT. 
-	\item Validación: Se implementará en el diseño del PCB. 
+	\item Verificación: se comprobará mediante la documentación del módulo xDOT. 
+	\item Validación: se implementará en el diseño del PCB pines de acceso por el cual se realizara un cagar de firmware para comprobar su correcta implementación. 
 \end{itemize}
 
 3.1.2. Envió de coordenadas GPS a través de enlace de radiofrecuencia LoRaWAN en banda AU915.
 \begin{itemize}
-	\item Verificación: Se comprobará mediante la lectura de documentación y diagramas esquemáticos del sistema. 
-	\item Validación: Se probará estableciendo la comunicación con el Gateway LoRa.  
+	\item Verificación: se comprobará mediante la lectura de documentación y diagramas esquemáticos del sistema. 
+	\item Validación: se probará estableciendo la comunicación con el Gateway LoRaWAN.  
 \end{itemize}
 
 3.1.3. Bajo consumo con autonomía mínima de 1 año.
 \begin{itemize}
-	\item Verificación: Se comprobará y estimara a partir de las hojas de datos de los distintos componentes y módulos del hardware. 
-	\item Validación: Se realizarán mediciones de consumo durante el funcionamiento del mismo. 
+	\item Verificación: se comprobará y estimará a partir de las hojas de datos de los distintos componentes y módulos del hardware. 
+	\item Validación: se realizarán mediciones de consumo durante el funcionamiento del mismo. 
 \end{itemize}
 
 3.1.4. Entrada de recarga de batería por micro-USB.
 \begin{itemize}
-	\item Verificación: Se buscará un diseño de circuito de recarga. 
-	\item Validación: Se someterá el prototipo a un proceso de carga completo. 
+	\item Verificación: se verificará y aprobará un diseño de circuito de recarga con el colaborador y orientador del proyecto. 
+	\item Validación: se someterá el prototipo a un proceso de carga completo. 
 \end{itemize}
 
 3.1.5. Baja tasa de transferencia de datos. 
 \begin{itemize}
-	\item Verificación: Se estudiará a partir de las hojas de datos y documentación como optimizar la transmisión de datos. 
-	\item Validación: Se realizaran pruebas de transmisión bajo condiciones limites de comunicación. 
+	\item Verificación: se estudiará a partir de las hojas de datos y documentación como optimizar la transmisión de datos. 
+	\item Validación: se realizarán pruebas de transmisión bajo condiciones límites de comunicación. 
 \end{itemize}
 
 3.1.6. Bajo costo, se busca competitividad en el mercado.
 \begin{itemize}
-	\item Verificación: Se exploraran las opciones mas confiables y económicas posibles. 
-	\item Validación: Al finalizar el proyecto se hará una estimación real de lo que costo el proyecto y se comparara con la competencia existente. 
+	\item Verificación: se explorarán las opciones más confiables y económicas posibles. 
+	\item Validación: al finalizar el proyecto se hará una estimación real de lo que costó el proyecto y se comparará con la competencia existente. 
 \end{itemize}
 
 3.2.1. Almacenamiento de la información recolectada en la plataforma AWS Cloud. 
 \begin{itemize}
-	\item Verificación: Se elaborará una estrategia de transmisión de datos a través de la infraestructura LoRa para garantizar el envió y almacenamiento de datos al Cloud. 
-	\item Validación: Se verificará la llegada de los datos a través de una cuenta de prueba en AWS Cloud. 
+	\item Verificación: se elaborará una estrategia de transmisión de datos a través de la infraestructura LoRaWAN para garantizar el envió y almacenamiento de datos al Cloud. 
+	\item Validación: se verificará la llegada de los datos a través de una cuenta de prueba en AWS Cloud. 
 \end{itemize}
 
 3.2.2. Validación de usuario con la plataforma de Smartium.
 \begin{itemize}
-	\item Verificación: Se dispondrá de una cuenta habilitada y se estudiarán los mecanismos y herramientas para su implementación. 
-	\item Validación: Se realizará un login desde la aplicación. 
+	\item Verificación: se dispondrá de una cuenta habilitada y se estudiarán los mecanismos y herramientas para su implementación. 
+	\item Validación: se realizará un login desde la aplicación. 
 \end{itemize}
 
 3.2.3. Creación y asociación de nuevos animales donde se podrán cargar identificadores únicos, tipo, nombre, fecha, etc. 
 \begin{itemize}
-	\item Verificación: Se estudiaran los algoritmos y herramientas que se usaran para la implementación. 
-	\item Validación: Se agregaran nuevos nodos de transmisión y se probará la escalabilidad del sistema. 
+	\item Verificación: se estudiarán los algoritmos y herramientas que se usarán para la implementación. 
+	\item Validación: se agregarán nuevos nodos de transmisión y se probará la escalabilidad del sistema. 
 \end{itemize}
 
 3.2.4. Cálculo de distancia recorrida por el animal de forma diaria, cada tres días y semanales. 
 \begin{itemize}
-	\item Verificación: Se estudiaran los algoritmos y herramientas que se usaran para la implementación. 
-	\item Validación: Se realizaran pruebas de transmisión durante varios días para comprobar el cumplimiento del requerimiento y el correcto funcionamiento de los algoritmos implementados. 
+	\item Verificación: se estudiarán los algoritmos y herramientas que se usaran para la implementación. 
+	\item Validación: se realizaran pruebas de transmisión durante varios días para comprobar el cumplimiento del requerimiento y el correcto funcionamiento de los algoritmos implementados. 
 \end{itemize}
 
 3.2.5. Creación de zonas georeferenciadas para establecer si un animal está fuera del territorio. 
 \begin{itemize}
-	\item Verificación: Se estudiara el uso de Google Maps y los algoritmos necesarios para implementarlo en el sistema. 
-	\item Validación: Se realizarán pruebas sobre distintos territorios y se ubicarán geográficamente en un mapa en la aplicación. 
+	\item Verificación: se estudiará el uso de Google Maps y los algoritmos necesarios para implementarlo en el sistema. 
+	\item Validación: se realizarán pruebas sobre distintos territorios y se ubicarán geográficamente en un mapa en la aplicación. 
 \end{itemize}
 
 3.2.6. Visualización de la última posición de los animales asociados a un usuario junto con su respectivo historial de ubicación. 
 \begin{itemize}
-	\item Verificación: Se estudiaran los algoritmos y se diseñará una estructura visual acorde que respete el diseño ya existente. 
-	\item Validación: Se comparará el diseño con el ya existente y se realizarán mediciones para probar la correcta visualización de la información que solicita el requerimiento. 
+	\item Verificación: se estudiarán los algoritmos y se diseñará una estructura visual acorde que respete el diseño ya existente. 
+	\item Validación: se comparará el diseño con el ya existente y se realizarán mediciones para probar la correcta visualización de la información que solicita el requerimiento. 
 \end{itemize}
 
 3.2.7. Plataforma compatible con AWS Cloud.
 \begin{itemize}
-	\item Verificación: Se estudiarán todos los algoritmos y reglas necesarias para integrarse completamente con el servicio de AWS Cloud. 
-	\item Validación: Se verificará la integración con AWS Cloud en todas secciones de la aplicación que se relacionen con ella. 
+	\item Verificación: se estudiarán todos los algoritmos y reglas necesarias para integrarse completamente con el servicio de AWS Cloud. 
+	\item Validación: se verificará la integración con AWS Cloud en todas secciones de la aplicación que se relacionen con ella. 
 \end{itemize}
 
 4. Requerimientos de la documentación.
 \begin{itemize}
-	\item Verificación: Se dedicará el tiempo a la elaboración de todos los documentos requeridos.  
-	\item Validación: Se evaluaran todos los entregables en el desarrollo del proyecto. 
+	\item Verificación: se va a verificar que en el desglose de tareas se haya dispuesto del tiempo suficiente para elaborar toda la documentación requerida. 
+	\item Validación: se evaluarán todos los entregables en el desarrollo del proyecto. 
 \end{itemize}
 
 \vspace{250px}
@@ -834,13 +808,13 @@ Todo el proceso de cierre estará a cargo de \authorname.
 \begin{itemize}
 \item Pautas de trabajo que se seguirán para analizar si se respetó el Plan de Proyecto original:
 	\begin{itemize}
-	\item Se evaluaran los requerimientos del proyecto y se compararan los objetivos planteados con el plan de trabajo inicial. 
-	\item Se resaltaran los cumplimientos en cuanto a reportes, tiempos de entrega y ejecución. 
+	\item Se evaluarán los requerimientos del proyecto y se compararán los objetivos planteados con el plan de trabajo inicial. 
+	\item Se resaltarán los cumplimientos en cuanto a reportes, tiempos de entrega y ejecución. 
 	\end{itemize}
 
-\item Identificación de las técnicas y procedimientos útiles e inútiles que se utilizaron, y los problemas que surgieron y cómo se solucionaron:
+\item Identificación de las técnicas y procedimientos útiles e inútiles que se emplearon, y los problemas que surgieron y cómo se solucionaron:
 	\begin{itemize}
-	\item Se indicará el porcentaje de uso de las distintas herramientas utilizadas y se compararan con la matriz de uso de recursos para valorar su impacto real en el proyecto. 
+	\item Se indicará el porcentaje de uso de las distintas herramientas utilizadas y se compararán con la matriz de uso de recursos para valorar su impacto real en el proyecto. 
 	\item Se destacará el uso de herramientas o procedimientos que no hayan sido contemplados durante la planificación. 
 	\end{itemize}
 
